@@ -10,5 +10,6 @@
     Hello world!
   </h1>
   <i class="fa-solid fa-house"></i>
+  <button class="text-cm-yellow-1 bg-cm-purple-1 font-semibold text-lg">Btn</button>
 </body>
 </html>
