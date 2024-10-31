@@ -6,10 +6,12 @@
   @vite('resources/css/app.css')
 </head>
 <body>
+  <x-header />
   <h1 class="text-3xl font-bold underline">
     Hello world!
   </h1>
   <i class="fa-solid fa-house"></i>
-  <button class="text-cm-yellow-1 bg-cm-purple-1 font-semibold text-lg">Btn</button>
+  <button class="text-cm-purple-3 bg-cm-purple-1 font-semibold text-lg">Boton</button>
+  <x-footer />
 </body>
 </html>
