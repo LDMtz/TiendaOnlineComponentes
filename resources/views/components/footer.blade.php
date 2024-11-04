@@ -1,6 +1,5 @@
 <!-- Pie de la página -->
-
-<footer class="fixed bottom-0 w-full">
+<footer class="w-full">
     <hr class="bg-cm-gray-5 mx-5 h-0.5 mb-3">
 
     <!-- <div class="w-full"> -->
@@ -32,8 +31,4 @@
             </a>
           </div>
       </div>
-    <!-- </div> -->
-
-
-      
 </footer>

@@ -6,11 +6,14 @@
     <title>Belikekis Components - Tienda Online</title>
     @vite('resources/css/app.css')
 </head>
-<body class="bg-cm-gray-1">
+<body class="bg-cm-gray-1 min-h-screen flex flex-col">
     <x-header />
 
-    {{$slot}}
+    <main class="flex-grow">
+        {{$slot}}
+    </main>
 
     <x-footer />
+
 </body>
 </html>
