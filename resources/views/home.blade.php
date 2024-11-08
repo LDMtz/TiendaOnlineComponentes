@@ -11,74 +11,74 @@
                     </div>
     
                     <!-- Componente de Categoría -->
-                    <li class="p-2 mx-3 flex items-center bg-cm-gray-3 hover:bg-gray-700 rounded-lg">
+                    <li class="p-2 mx-3 flex items-center bg-cm-gray-3 rounded-lg hover:border-x-8 border-cm-purple-3">
                         <i class="fa-solid fa-memory text-cm-purple-2 mr-4 ml-8"></i>
                         <span class="text-cm-purple-2 font-bold">COMPONENTES</span>
                     </li>
     
                     <!-- Audio (con subcategorías) -->
                     <li class="mx-3 opcion-con-desplegable list-none">
-                        <div class="p-2 flex items-center bg-cm-gray-3 hover:bg-gray-700 rounded-lg">
+                        <div class="p-2 flex items-center bg-cm-gray-3 rounded-lg hover:border-x-8 border-cm-purple-3">
                             <i class="fa-solid fa-headphones text-cm-purple-2 mr-4 ml-8"></i>
                             <span class="text-cm-purple-2 font-bold">AUDIO</span>
                         </div>
-                        <ul class="desplegable ml-4 hidden text-white">
-                            <li><a href="#" class="p-2 hover:bg-gray-700 flex items-center">Bocinas</a></li>
-                            <li><a href="#" class="p-2 hover:bg-gray-700 flex items-center">Auriculares</a></li>
-                            <li><a href="#" class="p-2 hover:bg-gray-700 flex items-center">Barra de sonido</a></li>
+                        <ul class="desplegable hidden text-white mx-4">
+                            <li><a href="#" class="p-2 hover:bg-cm-gray-6 hover:text-cm-purple-9 flex items-center border-b-2 border-cm-gray-8">Bocinas</a></li>
+                            <li><a href="#" class="p-2 hover:bg-cm-gray-6 hover:text-cm-purple-9 flex items-center border-b-2 border-cm-gray-8">Auriculares</a></li>
+                            <li><a href="#" class="p-2 hover:bg-cm-gray-6 hover:text-cm-purple-9 flex items-center border-b-2 border-cm-gray-8">Barra de sonido</a></li>
                         </ul>
                     </li>
     
                     <!-- Monitor -->
-                    <li class="mx-3 p-2 flex items-center bg-cm-gray-3 hover:bg-gray-700 rounded-lg">
+                    <li class="mx-3 p-2 flex items-center bg-cm-gray-3 rounded-lg hover:border-x-8 border-cm-purple-3">
                         <i class="fa-solid fa-desktop text-cm-purple-2 mr-4 ml-8"></i>
                         <span class="text-cm-purple-2 font-bold">MONITORES</span>
                     </li>
     
                     <!-- Laptop -->
-                    <li class="mx-3 p-2 flex items-center bg-cm-gray-3 hover:bg-gray-700 rounded-lg">
+                    <li class="mx-3 p-2 flex items-center bg-cm-gray-3 rounded-lg hover:border-x-8 border-cm-purple-3">
                         <i class="fa-solid fa-laptop text-cm-purple-2 mr-4 ml-8"></i>
                         <span class="text-cm-purple-2 font-bold">LAPTOP</span>
                     </li>
     
                     <!-- Dispositivos -->
-                    <li class="mx-3 p-2 flex items-center bg-cm-gray-3 hover:bg-gray-700 rounded-lg">
+                    <li class="mx-3 p-2 flex items-center bg-cm-gray-3 rounded-lg hover:border-x-8 border-cm-purple-3">
                         <i class="fa-solid fa-tablet text-cm-purple-2 mr-4 ml-8"></i>
                         <span class="text-cm-purple-2 font-bold">DISPOSITIVOS</span>
                     </li>
     
                     <!-- Energía -->
-                    <li class="mx-3 p-2 flex items-center bg-cm-gray-3 hover:bg-gray-700 rounded-lg">
+                    <li class="mx-3 p-2 flex items-center bg-cm-gray-3 rounded-lg hover:border-x-8 border-cm-purple-3">
                         <i class="fa-solid fa-battery-three-quarters text-cm-purple-2 mr-4 ml-8"></i>
                         <span class="text-cm-purple-2 font-bold">ENERGÍA</span>
                     </li>
     
                     <!-- Gamer -->
-                    <li class="mx-3 p-2 flex items-center bg-cm-gray-3 hover:bg-gray-700 rounded-lg">
+                    <li class="mx-3 p-2 flex items-center bg-cm-gray-3 rounded-lg hover:border-x-8 border-cm-purple-3">
                         <i class="fa-solid fa-gamepad text-cm-purple-2 mr-4 ml-8"></i>
                         <span class="text-cm-purple-2 font-bold">GAMER</span>
                     </li>
     
                     <!-- Exclusivo -->
-                    <li class="mx-3 p-2 flex items-center bg-cm-gray-3 hover:bg-gray-700 rounded-lg">
+                    <li class="mx-3 p-2 flex items-center bg-cm-gray-3 rounded-lg hover:border-x-8 border-cm-purple-3">
                         <i class="fa-solid fa-crown text-cm-purple-2 mr-4 ml-8"></i>
                         <span class="text-cm-purple-2 font-bold">EXCLUSIVO</span>
                     </li>
     
                     <!-- Nuevos -->
-                    <li class="mx-3 p-2 flex items-center bg-cm-gray-3 hover:bg-gray-700 rounded-lg">
+                    <li class="mx-3 p-2 flex items-center bg-cm-gray-3 rounded-lg hover:border-x-8 border-cm-purple-3">
                         <i class="fa-solid fa-shekel-sign text-cm-purple-2 mr-4 ml-8"></i>
                         <span class="text-cm-purple-2 font-bold">NUEVOS</span>
                     </li>
 
                     <!-- Computadoras -->
-                    <li class="mx-3 p-2 flex items-center bg-cm-gray-3 hover:bg-gray-700 rounded-lg">
+                    <li class="mx-3 p-2 flex items-center bg-cm-gray-3 rounded-lg hover:border-x-8 border-cm-purple-3">
                         <i class="fa-solid fa-computer text-cm-purple-2 mr-4 ml-8"></i>
                         <span class="text-cm-purple-2 font-bold">EQUIPOS</span>
                     </li>
 
                     <!-- Servidores -->
-                    <li class="mx-3 p-2 flex items-center bg-cm-gray-3 hover:bg-gray-700 rounded-lg">
+                    <li class="mx-3 p-2 flex items-center bg-cm-gray-3 rounded-lg hover:border-x-8 border-cm-purple-3">
                         <i class="fa-solid fa-server text-cm-purple-2 mr-4 ml-8"></i>
                         <span class="text-cm-purple-2 font-bold">SERVIDORES</span>
                     </li>
@@ -532,6 +532,7 @@
     // Cambia la imagen cada 3 segundos
     setInterval(showNextImage, 3000);
     });
+
   </script>
 
 
