@@ -4,7 +4,7 @@
     <div class="flex items-center justify-between h-12 mx-5 ">
       <!-- Logo y Nombre -->
       <a href="{{ url('/') }}" class="flex items-center">
-        <img class="w-9 h-9" src="https://static.vecteezy.com/system/resources/previews/036/895/728/non_2x/hacker-logo-or-hacker-in-black-hoodie-cyber-crime-with-laptop-free-png.png" alt="">
+        <img class="w-9 h-9" src="{{ asset('images/logo.png') }}" alt="">
         <span class="text-lg ml-3 font-bold font-sans text-white">Belikekis Components</span>
     </a>
 

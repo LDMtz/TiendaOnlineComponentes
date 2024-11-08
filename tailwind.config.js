@@ -21,10 +21,9 @@ export default {
               'cm-purple-5': '#6B0EDD',
               'cm-purple-6': '#905DE7',
               'cm-purple-7': '#8C1AF6',
-              'cm-purple-btn': '#8C1AF6',
               'cm-purple-8': '#E39DFF',
-              'cm-purple-9': '#B9B1FFF',
-              'cm-purple-10': '#CEA0FFF',
+              'cm-purple-9': '#B9B1FF',
+              'cm-purple-10': '#CEA0FF',
               'cm-purple-11': '#4F007C',
   
                /* Gray*/
@@ -57,6 +56,7 @@ export default {
                 'cm-blue-4': '#1D0978',
                 'cm-blue-5': '#1A37F6',
                 'cm-blue-6': '#79AFFF',
+                'cm-blue-7': '#31ACF9',
   
                 /*Yellow*/
                 'cm-yellow-1': '#774409',
