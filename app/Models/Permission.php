@@ -15,4 +15,10 @@ class Permission extends Model
         'name',
         'description',
     ];
+
+    //Relacion bidireccional con la tabla roles (muchos-muchos)
+    public function roles()
+    {
+        return $this->belongsToMany(Role::class, 'permission_role');
+    }
 }

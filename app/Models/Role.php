@@ -14,4 +14,10 @@ class Role extends Model
     protected $fillable = [
         'name',
     ];
+
+    //Relacion bidireccional con la tabla permissions (muchos-muchos)
+    public function permissions()
+    {
+        return $this->belongsToMany(Permission::class, 'permission_role');
+    }
 }
