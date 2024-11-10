@@ -20,6 +20,11 @@ class Account extends Model
         'state',
     ];
 
+    //Relación con el modelo Employee. (uno-uno)
+    public function employee()
+    {
+        return $this->hasOne(Employee::class, 'account_id');
+    }
 
     //Relación con el modelo Role
     public function role():BelongsTo
