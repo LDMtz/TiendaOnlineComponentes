@@ -19,6 +19,7 @@ return new class extends Migration
 
         // Insertar los tres registros iniciales y unicos de roles
         DB::table('roles')->insert([
+            ['name' => 'Owner'],
             ['name' => 'Admin'],
             ['name' => 'Employee'],
             ['name' => 'Client']
