@@ -16,9 +16,12 @@ class Account extends Model
     protected $fillable = [
         'role_id',
         'username',
-        'password',
         'picture_profile',
         'state',
+    ];
+
+    protected $hidden = [
+        'password',
     ];
 
     //Relación con el modelo Employee. (uno-uno)

@@ -11,7 +11,7 @@ class ClientController extends Controller
      */
     public function index()
     {
-        //
+        return view('clients.index');
     }
 
     /**
@@ -19,29 +19,29 @@ class ClientController extends Controller
      */
     public function create()
     {
-        //
+        return view('clients.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
+        /**
      * Display the specified resource.
      */
     public function show(string $id)
     {
-        //
+        return view('clients.show');
     }
 
     /**
      * Show the form for editing the specified resource.
      */
     public function edit(string $id)
+    {
+        return view('clients.edit');
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     */
+    public function store(Request $request)
     {
         //
     }

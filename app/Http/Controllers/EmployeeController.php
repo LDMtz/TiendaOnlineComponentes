@@ -11,7 +11,7 @@ class EmployeeController extends Controller
      */
     public function index()
     {
-        //
+        return view('employees.index');
     }
 
     /**
@@ -19,15 +19,7 @@ class EmployeeController extends Controller
      */
     public function create()
     {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
+        return view('employees.create');
     }
 
     /**
@@ -35,13 +27,21 @@ class EmployeeController extends Controller
      */
     public function show(string $id)
     {
-        //
+        return view('employees.show');
     }
 
     /**
      * Show the form for editing the specified resource.
      */
     public function edit(string $id)
+    {
+        return view('employees.edit');
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     */
+    public function store(Request $request)
     {
         //
     }

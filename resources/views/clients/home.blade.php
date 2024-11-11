@@ -4,7 +4,7 @@
         <!-- Sidebar (Izquierda) -->
         <div>
             <aside class="bg-cm-gray-2 w-64 my-8 rounded-2xl pb-4 sticky top-8">
-                <nav class="space-y-2">
+                <nav class="space-y-2 select-none">
                     <!-- Título de Categorías -->
                     <div class="text-3xl text-center font-extrabold truncate mb-4 bg-cm-gray-3 text-cm-gray-5 p-4 w-full rounded-t-2xl">
                         CATEGORIAS
@@ -479,20 +479,7 @@
         </div>
     </div>
 
-
-
-
-
-
-
-
-
-
-    
-
-
-  
-
+</x-app-layout>
  
   <script>
     // Opciones desplegables de las categorías 
@@ -534,7 +521,3 @@
     });
 
   </script>
-
-
-
-</x-app-layout>
