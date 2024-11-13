@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Client;
 use Illuminate\Http\Request;
 
 class ClientController extends Controller
@@ -43,7 +44,17 @@ class ClientController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        /*
+        $item = new Client();
+        $item->fill([
+            'name' => $request->name,
+            'last_names' => $request->last_names,
+            'number' => $request->number,
+            'email' => $request->email,
+            'state' => true,  // Asignamos `true` al campo `state`
+        ]);
+        $item->save();
+        return to_route('login');*/
     }
 
     /**

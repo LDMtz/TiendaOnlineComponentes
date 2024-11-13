@@ -3,7 +3,7 @@
   <nav class="bg-cm-purple-1">
     <div class="flex items-center justify-between h-12 mx-5 ">
       <!-- Logo y Nombre -->
-      <a href="{{ url('/') }}" class="flex items-center">
+      <a href="{{ route('default_home') }}" class="flex items-center">
         <img class="w-9 h-9" src="{{ asset('images/logo.png') }}" alt="">
         <span class="text-lg ml-3 font-bold font-sans text-white">Belikekis Components</span>
     </a>
@@ -39,6 +39,16 @@
         <button type="button" class="">
           <i class="fa-solid fa-cart-shopping"></i>
         </button>
+
+        <!-- Botón login -->
+        <a href="{{route('login')}}" class="">
+          <i class="fa-solid fa-right-to-bracket"></i>
+        </a>
+
+        <!-- Botón logout -->
+        <a href="{{route('to_logout')}}" class="">
+          <i class="fa-solid fa-right-from-bracket"></i>
+        </a>
 
       </div>
     </div>

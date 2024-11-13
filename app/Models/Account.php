@@ -7,7 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 
-class Account extends Model
+//use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Contracts\Auth\Authenticatable;
+
+class Account extends Model implements Authenticatable
 {
     use HasFactory;
 
@@ -16,12 +19,15 @@ class Account extends Model
     protected $fillable = [
         'role_id',
         'username',
+        'email',
+        'password',
         'picture_profile',
         'state',
     ];
 
     protected $hidden = [
         'password',
+        'remember_token',
     ];
 
     //Relación con el modelo Employee. (uno-uno)
@@ -40,5 +46,42 @@ class Account extends Model
     public function role(): BelongsTo
     {
         return $this->belongsTo(Role::class, 'role_id');
+    }
+
+
+    //PARA LA AUTENTICACION
+    public function getAuthIdentifierName()
+    {
+        return 'email';
+    }
+
+    public function getAuthIdentifier()
+    {
+        return $this->getAttribute('email');
+    }
+
+    public function getAuthPassword()
+    {
+        return $this->getAttribute('password');
+    }
+
+    public function getAuthPasswordName()
+    {
+        return 'password';
+    }
+
+    public function getRememberToken()
+    {
+        return $this->getAttribute('remember_token');
+    }
+
+    public function setRememberToken($value)
+    {
+        $this->setAttribute('remember_token', $value);
+    }
+
+    public function getRememberTokenName()
+    {
+        return 'remember_token';
     }
 }

@@ -16,7 +16,6 @@ class Client extends Model
         'names',
         'last_names',
         'number',
-        'email',
         'state',
         'account_id',
     ];

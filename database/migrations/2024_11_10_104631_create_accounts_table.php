@@ -11,15 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('accounts', function (Blueprint $table) {
-            $table->id('id');
-            $table->foreignId('role_id')->constrained('roles')->onDelete('cascade');
-            $table->string('username', 50);
-            $table->string('password', 50);
-            $table->binary('picture_profile')->nullable();; // BLOB
-            $table->boolean('state')->default(true);
-            $table->timestamps();
-        });
+            Schema::create('accounts', function (Blueprint $table) {
+                $table->id('id');
+                $table->foreignId('role_id')->constrained('roles')->onDelete('cascade');
+                $table->string('username', 50);
+                $table->string('email', 200)->unique();
+                $table->string('password');
+                $table->binary('picture_profile')->nullable();; // BLOB
+                $table->boolean('state')->default(true);
+                $table->timestamps();
+            });
     }
 
     /**

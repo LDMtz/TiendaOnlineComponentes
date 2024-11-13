@@ -16,7 +16,6 @@ return new class extends Migration
             $table->string('names', 100);
             $table->string('last_names', 100);
             $table->string('number', 10);
-            $table->string('email', 200)->unique();
             $table->boolean('state')->default(true);
             $table->foreignId('account_id')->constrained('accounts')->onDelete('cascade'); // Foreign Key
             $table->timestamps();
