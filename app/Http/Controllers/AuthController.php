@@ -43,7 +43,6 @@ class AuthController extends Controller
             //dd(Auth::user());
             return to_route('home');
         }else{
-            dd(Auth::user());
             return back()->withErrors(['login' => 'Credenciales incorrectas']);
         }
     }
