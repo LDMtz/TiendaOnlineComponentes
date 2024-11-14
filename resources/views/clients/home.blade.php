@@ -193,13 +193,17 @@
                     <div class="col-span-5">
                         <span class="font-black text-2xl text-cm-purple-2">Productos destacados</span>
                     </div>
+                    <style>
+
+                    </style>
                     <!-- Producto 1  -->
-                    <div class="flex flex-col min-w-36 border-2 rounded-xl border-cm-gray-8 relative">
+                    <div class="flex flex-col min-w-36 border-2 rounded-xl border-cm-gray-8 relative group-product">
                         <div class="divide-y-2 divide-cm-gray-8">
                             <div class="flex justify-center p-1 gap-2">
+                                <img class="w-5 h-auto" src="Images/etiqueta-new.png" alt="">
                                 <img class="w-5 h-auto" src="Images/etiqueta-desc.png" alt="">
-                                <img class="w-5 h-auto" src="Images/etiqueta-desc.png" alt="">
-                                <img class="w-5 h-auto" src="Images/etiqueta-desc.png" alt="">
+                                <img class="w-5 h-auto" src="Images/etiqueta-exclusive.png" alt="">
+                                <img class="w-5 h-auto" src="Images/etiqueta-envio.png" alt="">
                             </div>
                             <div class="flex w-full justify-center bg-white">
                                 <img class="w-auto h-28 object-contain" src="Images/procesador-prueba.png" alt="producto de prueba">
@@ -216,17 +220,20 @@
                             </div>
                         </div>
                         <!-- Agregar a carrito || Lista deseos -->
-                        <button class="absolute top-[-6px] right-[-16px] z-10 w-10 h-10 rounded-full border-2 bg-cm-green-2 border-cm-green-1">
+                        <button class="btn-cart-list absolute top-[-6px] right-[-10px] 
+                            z-10 w-10 h-10 rounded-full border-2 bg-cm-green-2 border-cm-green-1
+                            hover:bg-green-800 hover:border-green-400">
                             <i class="fa-solid fa-cart-plus text-cm-green-1 text-lg"></i>
                         </button>
                     </div>
                     <!-- Producto 2 -->
-                    <div class="flex flex-col min-w-36 border-2 rounded-xl border-cm-gray-8 relative">
+                    <div class="flex flex-col min-w-36 border-2 rounded-xl border-cm-gray-8 relative group-product">
                         <div class="divide-y-2 divide-cm-gray-8">
                             <div class="flex justify-center p-1 gap-2">
+                                <img class="w-5 h-auto" src="Images/etiqueta-new.png" alt="">
                                 <img class="w-5 h-auto" src="Images/etiqueta-desc.png" alt="">
-                                <img class="w-5 h-auto" src="Images/etiqueta-desc.png" alt="">
-                                <img class="w-5 h-auto" src="Images/etiqueta-desc.png" alt="">
+                                <img class="w-5 h-auto" src="Images/etiqueta-exclusive.png" alt="">
+                                <img class="w-5 h-auto" src="Images/etiqueta-envio.png" alt="">
                             </div>
                             <div class="flex w-full justify-center bg-white">
                                 <img class="w-auto h-28 object-contain" src="Images/tarjeta-video-prueba.png" alt="producto de prueba">
@@ -243,17 +250,23 @@
                             </div>
                         </div>
                         <!-- Agregar a carrito || Lista deseos -->
-                        <button class="absolute top-[-6px] right-[-16px] z-10 w-10 h-10 rounded-full border-2 bg-cm-blue-2 border-cm-blue-7">
+                        <button class="btn-cart-list absolute top-[-6px] right-[-10px] z-10 w-10 h-10 rounded-full border-2 bg-cm-blue-2 border-cm-blue-7">
+                            <i class="fa-solid fa-receipt text-cm-blue-7 text-lg"></i>
+                        </button>
+                        <button class="btn-cart-list absolute top-[-6px] right-[-10px] 
+                            z-10 w-10 h-10 rounded-full border-2 bg-cm-blue-2 border-cm-blue-7
+                            hover:bg-sky-800 hover:border-sky-400">
                             <i class="fa-solid fa-receipt text-cm-blue-7 text-lg"></i>
                         </button>
                     </div>
                     <!-- Producto 3  -->
-                    <div class="flex flex-col min-w-36 border-2 rounded-xl border-cm-gray-8 relative">
+                    <div class="flex flex-col min-w-36 border-2 rounded-xl border-cm-gray-8 relative group-product">
                         <div class="divide-y-2 divide-cm-gray-8">
                             <div class="flex justify-center p-1 gap-2">
+                                <img class="w-5 h-auto" src="Images/etiqueta-new.png" alt="">
                                 <img class="w-5 h-auto" src="Images/etiqueta-desc.png" alt="">
-                                <img class="w-5 h-auto" src="Images/etiqueta-desc.png" alt="">
-                                <img class="w-5 h-auto" src="Images/etiqueta-desc.png" alt="">
+                                <img class="w-5 h-auto" src="Images/etiqueta-exclusive.png" alt="">
+                                <img class="w-5 h-auto" src="Images/etiqueta-envio.png" alt="">
                             </div>
                             <div class="flex w-full justify-center bg-white">
                                 <img class="w-auto h-28 object-contain" src="Images/procesador-prueba.png" alt="producto de prueba">
@@ -270,17 +283,20 @@
                             </div>
                         </div>
                         <!-- Agregar a carrito || Lista deseos -->
-                        <button class="absolute top-[-6px] right-[-16px] z-10 w-10 h-10 rounded-full border-2 bg-cm-green-2 border-cm-green-1">
+                        <button class="btn-cart-list absolute top-[-6px] right-[-10px] 
+                            z-10 w-10 h-10 rounded-full border-2 bg-cm-green-2 border-cm-green-1
+                            hover:bg-green-800 hover:border-green-400">
                             <i class="fa-solid fa-cart-plus text-cm-green-1 text-lg"></i>
                         </button>
                     </div>
                     <!-- Producto 4 -->
-                    <div class="flex flex-col min-w-36 border-2 rounded-xl border-cm-gray-8 relative">
+                    <div class="flex flex-col min-w-36 border-2 rounded-xl border-cm-gray-8 relative group-product">
                         <div class="divide-y-2 divide-cm-gray-8">
                             <div class="flex justify-center p-1 gap-2">
+                                <img class="w-5 h-auto" src="Images/etiqueta-new.png" alt="">
                                 <img class="w-5 h-auto" src="Images/etiqueta-desc.png" alt="">
-                                <img class="w-5 h-auto" src="Images/etiqueta-desc.png" alt="">
-                                <img class="w-5 h-auto" src="Images/etiqueta-desc.png" alt="">
+                                <img class="w-5 h-auto" src="Images/etiqueta-exclusive.png" alt="">
+                                <img class="w-5 h-auto" src="Images/etiqueta-envio.png" alt="">
                             </div>
                             <div class="flex w-full justify-center bg-white">
                                 <img class="w-auto h-28 object-contain" src="Images/tarjeta-video-prueba.png" alt="producto de prueba">
@@ -297,35 +313,43 @@
                             </div>
                         </div>
                         <!-- Agregar a carrito || Lista deseos -->
-                        <button class="absolute top-[-6px] right-[-16px] z-10 w-10 h-10 rounded-full border-2 bg-cm-blue-2 border-cm-blue-7">
+                        <button class="btn-cart-list absolute top-[-6px] right-[-10px] z-10 w-10 h-10 rounded-full border-2 bg-cm-blue-2 border-cm-blue-7">
+                            <i class="fa-solid fa-receipt text-cm-blue-7 text-lg"></i>
+                        </button>
+                        <button class="btn-cart-list absolute top-[-6px] right-[-10px] 
+                            z-10 w-10 h-10 rounded-full border-2 bg-cm-blue-2 border-cm-blue-7
+                            hover:bg-sky-800 hover:border-sky-400">
                             <i class="fa-solid fa-receipt text-cm-blue-7 text-lg"></i>
                         </button>
                     </div>
                     <!-- Producto 5 -->
-                    <div class="flex flex-col min-w-36 border-2 rounded-xl border-cm-gray-8 relative">
+                    <div class="flex flex-col min-w-36 border-2 rounded-xl border-cm-gray-8 relative group-product">
                         <div class="divide-y-2 divide-cm-gray-8">
                             <div class="flex justify-center p-1 gap-2">
+                                <img class="w-5 h-auto" src="Images/etiqueta-new.png" alt="">
                                 <img class="w-5 h-auto" src="Images/etiqueta-desc.png" alt="">
-                                <img class="w-5 h-auto" src="Images/etiqueta-desc.png" alt="">
-                                <img class="w-5 h-auto" src="Images/etiqueta-desc.png" alt="">
+                                <img class="w-5 h-auto" src="Images/etiqueta-exclusive.png" alt="">
+                                <img class="w-5 h-auto" src="Images/etiqueta-envio.png" alt="">
                             </div>
                             <div class="flex w-full justify-center bg-white">
-                                <img class="w-auto h-28 object-contain" src="Images/tarjeta-video-prueba.png" alt="producto de prueba">
+                                <img class="w-auto h-28 object-contain" src="Images/procesador-prueba.png" alt="producto de prueba">
                             </div>
                             <div class="text-cm-gray-10 leading-4">
-                                <p class="line-clamp-3">Tarjeta de Video Asus ROG Strix GeForce RTX 4090 OC Edition / ROG-STRIX-RTX4090-O24G-GAMING</p>
+                                <p class="line-clamp-3">Procesador Intel Core Ultra 7 265K / 20 Nucleos (8P+12E) / 3.9 GHz / LGA1851 / Intel Graphics / 125w / BX80768265K</p>
                             </div>
                             <div class="text-center">
                                 <span class="font-semibold text-xs text-cm-purple-10">$29,000</span>
                             </div>
                             <div class="text-center text-white">
-                                <i class="fa-solid fa-xmark text-cm-red-1"></i>
-                                <span class="ml-1 font-semibold text-xs">SIN EXISTENCIA</span>
+                                <i class="fa-solid fa-check text-cm-green-1"></i>
+                                <span class="ml-1 font-semibold text-xs">CON EXISTENCIA</span>
                             </div>
                         </div>
                         <!-- Agregar a carrito || Lista deseos -->
-                        <button class="absolute top-[-6px] right-[-16px] z-10 w-10 h-10 rounded-full border-2 bg-cm-blue-2 border-cm-blue-7">
-                            <i class="fa-solid fa-receipt text-cm-blue-7 text-lg"></i>
+                        <button class="btn-cart-list absolute top-[-6px] right-[-10px] 
+                            z-10 w-10 h-10 rounded-full border-2 bg-cm-green-2 border-cm-green-1
+                            hover:bg-green-800 hover:border-green-400">
+                            <i class="fa-solid fa-cart-plus text-cm-green-1 text-lg"></i>
                         </button>
                     </div>
                     
@@ -337,12 +361,13 @@
                         <span class="font-black text-2xl text-cm-purple-2">Productos con descuento</span>
                     </div>
                     <!-- Producto 1  -->
-                    <div class="flex flex-col min-w-36 border-2 rounded-xl border-cm-gray-8 relative">
+                    <div class="flex flex-col min-w-36 border-2 rounded-xl border-cm-gray-8 relative group-product">
                         <div class="divide-y-2 divide-cm-gray-8">
                             <div class="flex justify-center p-1 gap-2">
+                                <img class="w-5 h-auto" src="Images/etiqueta-new.png" alt="">
                                 <img class="w-5 h-auto" src="Images/etiqueta-desc.png" alt="">
-                                <img class="w-5 h-auto" src="Images/etiqueta-desc.png" alt="">
-                                <img class="w-5 h-auto" src="Images/etiqueta-desc.png" alt="">
+                                <img class="w-5 h-auto" src="Images/etiqueta-exclusive.png" alt="">
+                                <img class="w-5 h-auto" src="Images/etiqueta-envio.png" alt="">
                             </div>
                             <div class="flex w-full justify-center bg-white">
                                 <img class="w-auto h-28 object-contain" src="Images/procesador-prueba.png" alt="producto de prueba">
@@ -359,17 +384,20 @@
                             </div>
                         </div>
                         <!-- Agregar a carrito || Lista deseos -->
-                        <button class="absolute top-[-6px] right-[-16px] z-10 w-10 h-10 rounded-full border-2 bg-cm-green-2 border-cm-green-1">
+                        <button class="btn-cart-list absolute top-[-6px] right-[-10px] 
+                            z-10 w-10 h-10 rounded-full border-2 bg-cm-green-2 border-cm-green-1
+                            hover:bg-green-800 hover:border-green-400">
                             <i class="fa-solid fa-cart-plus text-cm-green-1 text-lg"></i>
                         </button>
                     </div>
                     <!-- Producto 2 -->
-                    <div class="flex flex-col min-w-36 border-2 rounded-xl border-cm-gray-8 relative">
+                    <div class="flex flex-col min-w-36 border-2 rounded-xl border-cm-gray-8 relative group-product">
                         <div class="divide-y-2 divide-cm-gray-8">
                             <div class="flex justify-center p-1 gap-2">
+                                <img class="w-5 h-auto" src="Images/etiqueta-new.png" alt="">
                                 <img class="w-5 h-auto" src="Images/etiqueta-desc.png" alt="">
-                                <img class="w-5 h-auto" src="Images/etiqueta-desc.png" alt="">
-                                <img class="w-5 h-auto" src="Images/etiqueta-desc.png" alt="">
+                                <img class="w-5 h-auto" src="Images/etiqueta-exclusive.png" alt="">
+                                <img class="w-5 h-auto" src="Images/etiqueta-envio.png" alt="">
                             </div>
                             <div class="flex w-full justify-center bg-white">
                                 <img class="w-auto h-28 object-contain" src="Images/tarjeta-video-prueba.png" alt="producto de prueba">
@@ -386,17 +414,23 @@
                             </div>
                         </div>
                         <!-- Agregar a carrito || Lista deseos -->
-                        <button class="absolute top-[-6px] right-[-16px] z-10 w-10 h-10 rounded-full border-2 bg-cm-blue-2 border-cm-blue-7">
+                        <button class="btn-cart-list absolute top-[-6px] right-[-10px] z-10 w-10 h-10 rounded-full border-2 bg-cm-blue-2 border-cm-blue-7">
+                            <i class="fa-solid fa-receipt text-cm-blue-7 text-lg"></i>
+                        </button>
+                        <button class="btn-cart-list absolute top-[-6px] right-[-10px] 
+                            z-10 w-10 h-10 rounded-full border-2 bg-cm-blue-2 border-cm-blue-7
+                            hover:bg-sky-800 hover:border-sky-400">
                             <i class="fa-solid fa-receipt text-cm-blue-7 text-lg"></i>
                         </button>
                     </div>
                     <!-- Producto 3  -->
-                    <div class="flex flex-col min-w-36 border-2 rounded-xl border-cm-gray-8 relative">
+                    <div class="flex flex-col min-w-36 border-2 rounded-xl border-cm-gray-8 relative group-product">
                         <div class="divide-y-2 divide-cm-gray-8">
                             <div class="flex justify-center p-1 gap-2">
+                                <img class="w-5 h-auto" src="Images/etiqueta-new.png" alt="">
                                 <img class="w-5 h-auto" src="Images/etiqueta-desc.png" alt="">
-                                <img class="w-5 h-auto" src="Images/etiqueta-desc.png" alt="">
-                                <img class="w-5 h-auto" src="Images/etiqueta-desc.png" alt="">
+                                <img class="w-5 h-auto" src="Images/etiqueta-exclusive.png" alt="">
+                                <img class="w-5 h-auto" src="Images/etiqueta-envio.png" alt="">
                             </div>
                             <div class="flex w-full justify-center bg-white">
                                 <img class="w-auto h-28 object-contain" src="Images/procesador-prueba.png" alt="producto de prueba">
@@ -413,17 +447,20 @@
                             </div>
                         </div>
                         <!-- Agregar a carrito || Lista deseos -->
-                        <button class="absolute top-[-6px] right-[-16px] z-10 w-10 h-10 rounded-full border-2 bg-cm-green-2 border-cm-green-1">
+                        <button class="btn-cart-list absolute top-[-6px] right-[-10px] 
+                            z-10 w-10 h-10 rounded-full border-2 bg-cm-green-2 border-cm-green-1
+                            hover:bg-green-800 hover:border-green-400">
                             <i class="fa-solid fa-cart-plus text-cm-green-1 text-lg"></i>
                         </button>
                     </div>
                     <!-- Producto 4 -->
-                    <div class="flex flex-col min-w-36 border-2 rounded-xl border-cm-gray-8 relative">
+                    <div class="flex flex-col min-w-36 border-2 rounded-xl border-cm-gray-8 relative group-product">
                         <div class="divide-y-2 divide-cm-gray-8">
                             <div class="flex justify-center p-1 gap-2">
+                                <img class="w-5 h-auto" src="Images/etiqueta-new.png" alt="">
                                 <img class="w-5 h-auto" src="Images/etiqueta-desc.png" alt="">
-                                <img class="w-5 h-auto" src="Images/etiqueta-desc.png" alt="">
-                                <img class="w-5 h-auto" src="Images/etiqueta-desc.png" alt="">
+                                <img class="w-5 h-auto" src="Images/etiqueta-exclusive.png" alt="">
+                                <img class="w-5 h-auto" src="Images/etiqueta-envio.png" alt="">
                             </div>
                             <div class="flex w-full justify-center bg-white">
                                 <img class="w-auto h-28 object-contain" src="Images/tarjeta-video-prueba.png" alt="producto de prueba">
@@ -440,40 +477,211 @@
                             </div>
                         </div>
                         <!-- Agregar a carrito || Lista deseos -->
-                        <button class="absolute top-[-6px] right-[-16px] z-10 w-10 h-10 rounded-full border-2 bg-cm-blue-2 border-cm-blue-7">
+                        <button class="btn-cart-list absolute top-[-6px] right-[-10px] z-10 w-10 h-10 rounded-full border-2 bg-cm-blue-2 border-cm-blue-7">
+                            <i class="fa-solid fa-receipt text-cm-blue-7 text-lg"></i>
+                        </button>
+                        <button class="btn-cart-list absolute top-[-6px] right-[-10px] 
+                            z-10 w-10 h-10 rounded-full border-2 bg-cm-blue-2 border-cm-blue-7
+                            hover:bg-sky-800 hover:border-sky-400">
                             <i class="fa-solid fa-receipt text-cm-blue-7 text-lg"></i>
                         </button>
                     </div>
                     <!-- Producto 5 -->
-                    <div class="flex flex-col min-w-36 border-2 rounded-xl border-cm-gray-8 relative">
+                    <div class="flex flex-col min-w-36 border-2 rounded-xl border-cm-gray-8 relative group-product">
                         <div class="divide-y-2 divide-cm-gray-8">
                             <div class="flex justify-center p-1 gap-2">
+                                <img class="w-5 h-auto" src="Images/etiqueta-new.png" alt="">
                                 <img class="w-5 h-auto" src="Images/etiqueta-desc.png" alt="">
-                                <img class="w-5 h-auto" src="Images/etiqueta-desc.png" alt="">
-                                <img class="w-5 h-auto" src="Images/etiqueta-desc.png" alt="">
+                                <img class="w-5 h-auto" src="Images/etiqueta-exclusive.png" alt="">
+                                <img class="w-5 h-auto" src="Images/etiqueta-envio.png" alt="">
                             </div>
                             <div class="flex w-full justify-center bg-white">
-                                <img class="w-auto h-28 object-contain" src="Images/tarjeta-video-prueba.png" alt="producto de prueba">
+                                <img class="w-auto h-28 object-contain" src="Images/procesador-prueba.png" alt="producto de prueba">
                             </div>
                             <div class="text-cm-gray-10 leading-4">
-                                <p class="line-clamp-3">Tarjeta de Video Asus ROG Strix GeForce RTX 4090 OC Edition / ROG-STRIX-RTX4090-O24G-GAMING</p>
+                                <p class="line-clamp-3">Procesador Intel Core Ultra 7 265K / 20 Nucleos (8P+12E) / 3.9 GHz / LGA1851 / Intel Graphics / 125w / BX80768265K</p>
                             </div>
                             <div class="text-center">
                                 <span class="font-semibold text-xs text-cm-purple-10">$29,000</span>
                             </div>
                             <div class="text-center text-white">
-                                <i class="fa-solid fa-xmark text-cm-red-1"></i>
-                                <span class="ml-1 font-semibold text-xs">SIN EXISTENCIA</span>
+                                <i class="fa-solid fa-check text-cm-green-1"></i>
+                                <span class="ml-1 font-semibold text-xs">CON EXISTENCIA</span>
                             </div>
                         </div>
                         <!-- Agregar a carrito || Lista deseos -->
-                        <button class="absolute top-[-6px] right-[-16px] z-10 w-10 h-10 rounded-full border-2 bg-cm-blue-2 border-cm-blue-7">
-                            <i class="fa-solid fa-receipt text-cm-blue-7 text-lg"></i>
+                        <button class="btn-cart-list absolute top-[-6px] right-[-10px] 
+                            z-10 w-10 h-10 rounded-full border-2 bg-cm-green-2 border-cm-green-1
+                            hover:bg-green-800 hover:border-green-400">
+                            <i class="fa-solid fa-cart-plus text-cm-green-1 text-lg"></i>
                         </button>
                     </div>
                     
                 </div>
 
+                <!-- Productos nuevos -->
+                <div class="container grid grid-cols-5 p-4 gap-4">
+                    <div class="col-span-5">
+                        <span class="font-black text-2xl text-cm-purple-2">Productos nuevos</span>
+                    </div>
+                    <!-- Producto 1  -->
+                    <div class="flex flex-col min-w-36 border-2 rounded-xl border-cm-gray-8 relative group-product">
+                        <div class="divide-y-2 divide-cm-gray-8">
+                            <div class="flex justify-center p-1 gap-2">
+                                <img class="w-5 h-auto" src="Images/etiqueta-new.png" alt="">
+                                <img class="w-5 h-auto" src="Images/etiqueta-desc.png" alt="">
+                                <img class="w-5 h-auto" src="Images/etiqueta-exclusive.png" alt="">
+                                <img class="w-5 h-auto" src="Images/etiqueta-envio.png" alt="">
+                            </div>
+                            <div class="flex w-full justify-center bg-white">
+                                <img class="w-auto h-28 object-contain" src="Images/procesador-prueba.png" alt="producto de prueba">
+                            </div>
+                            <div class="text-cm-gray-10 leading-4">
+                                <p class="line-clamp-3">Procesador Intel Core Ultra 7 265K / 20 Nucleos (8P+12E) / 3.9 GHz / LGA1851 / Intel Graphics / 125w / BX80768265K</p>
+                            </div>
+                            <div class="text-center">
+                                <span class="font-semibold text-xs text-cm-purple-10">$29,000</span>
+                            </div>
+                            <div class="text-center text-white">
+                                <i class="fa-solid fa-check text-cm-green-1"></i>
+                                <span class="ml-1 font-semibold text-xs">CON EXISTENCIA</span>
+                            </div>
+                        </div>
+                        <!-- Agregar a carrito || Lista deseos -->
+                        <button class="btn-cart-list absolute top-[-6px] right-[-10px] 
+                            z-10 w-10 h-10 rounded-full border-2 bg-cm-green-2 border-cm-green-1
+                            hover:bg-green-800 hover:border-green-400">
+                            <i class="fa-solid fa-cart-plus text-cm-green-1 text-lg"></i>
+                        </button>
+                    </div>
+                    <!-- Producto 2 -->
+                    <div class="flex flex-col min-w-36 border-2 rounded-xl border-cm-gray-8 relative group-product">
+                        <div class="divide-y-2 divide-cm-gray-8">
+                            <div class="flex justify-center p-1 gap-2">
+                                <img class="w-5 h-auto" src="Images/etiqueta-new.png" alt="">
+                                <img class="w-5 h-auto" src="Images/etiqueta-desc.png" alt="">
+                                <img class="w-5 h-auto" src="Images/etiqueta-exclusive.png" alt="">
+                                <img class="w-5 h-auto" src="Images/etiqueta-envio.png" alt="">
+                            </div>
+                            <div class="flex w-full justify-center bg-white">
+                                <img class="w-auto h-28 object-contain" src="Images/tarjeta-video-prueba.png" alt="producto de prueba">
+                            </div>
+                            <div class="text-cm-gray-10 leading-4">
+                                <p class="line-clamp-3">Tarjeta de Video Asus ROG Strix GeForce RTX 4090 OC Edition / ROG-STRIX-RTX4090-O24G-GAMING</p>
+                            </div>
+                            <div class="text-center">
+                                <span class="font-semibold text-xs text-cm-purple-10">$29,000</span>
+                            </div>
+                            <div class="text-center text-white">
+                                <i class="fa-solid fa-xmark text-cm-red-1"></i>
+                                <span class="ml-1 font-semibold text-xs">SIN EXISTENCIA</span>
+                            </div>
+                        </div>
+                        <!-- Agregar a carrito || Lista deseos -->
+                        <button class="btn-cart-list absolute top-[-6px] right-[-10px] z-10 w-10 h-10 rounded-full border-2 bg-cm-blue-2 border-cm-blue-7">
+                            <i class="fa-solid fa-receipt text-cm-blue-7 text-lg"></i>
+                        </button>
+                        <button class="btn-cart-list absolute top-[-6px] right-[-10px] 
+                            z-10 w-10 h-10 rounded-full border-2 bg-cm-blue-2 border-cm-blue-7
+                            hover:bg-sky-800 hover:border-sky-400">
+                            <i class="fa-solid fa-receipt text-cm-blue-7 text-lg"></i>
+                        </button>
+                    </div>
+                    <!-- Producto 3  -->
+                    <div class="flex flex-col min-w-36 border-2 rounded-xl border-cm-gray-8 relative group-product">
+                        <div class="divide-y-2 divide-cm-gray-8">
+                            <div class="flex justify-center p-1 gap-2">
+                                <img class="w-5 h-auto" src="Images/etiqueta-new.png" alt="">
+                                <img class="w-5 h-auto" src="Images/etiqueta-desc.png" alt="">
+                                <img class="w-5 h-auto" src="Images/etiqueta-exclusive.png" alt="">
+                                <img class="w-5 h-auto" src="Images/etiqueta-envio.png" alt="">
+                            </div>
+                            <div class="flex w-full justify-center bg-white">
+                                <img class="w-auto h-28 object-contain" src="Images/procesador-prueba.png" alt="producto de prueba">
+                            </div>
+                            <div class="text-cm-gray-10 leading-4">
+                                <p class="line-clamp-3">Procesador Intel Core Ultra 7 265K / 20 Nucleos (8P+12E) / 3.9 GHz / LGA1851 / Intel Graphics / 125w / BX80768265K</p>
+                            </div>
+                            <div class="text-center">
+                                <span class="font-semibold text-xs text-cm-purple-10">$29,000</span>
+                            </div>
+                            <div class="text-center text-white">
+                                <i class="fa-solid fa-check text-cm-green-1"></i>
+                                <span class="ml-1 font-semibold text-xs">CON EXISTENCIA</span>
+                            </div>
+                        </div>
+                        <!-- Agregar a carrito || Lista deseos -->
+                        <button class="btn-cart-list absolute top-[-6px] right-[-10px] 
+                            z-10 w-10 h-10 rounded-full border-2 bg-cm-green-2 border-cm-green-1
+                            hover:bg-green-800 hover:border-green-400">
+                            <i class="fa-solid fa-cart-plus text-cm-green-1 text-lg"></i>
+                        </button>
+                    </div>
+                    <!-- Producto 4 -->
+                    <div class="flex flex-col min-w-36 border-2 rounded-xl border-cm-gray-8 relative group-product">
+                        <div class="divide-y-2 divide-cm-gray-8">
+                            <div class="flex justify-center p-1 gap-2">
+                                <img class="w-5 h-auto" src="Images/etiqueta-new.png" alt="">
+                                <img class="w-5 h-auto" src="Images/etiqueta-desc.png" alt="">
+                                <img class="w-5 h-auto" src="Images/etiqueta-exclusive.png" alt="">
+                                <img class="w-5 h-auto" src="Images/etiqueta-envio.png" alt="">
+                            </div>
+                            <div class="flex w-full justify-center bg-white">
+                                <img class="w-auto h-28 object-contain" src="Images/tarjeta-video-prueba.png" alt="producto de prueba">
+                            </div>
+                            <div class="text-cm-gray-10 leading-4">
+                                <p class="line-clamp-3">Tarjeta de Video Asus ROG Strix GeForce RTX 4090 OC Edition / ROG-STRIX-RTX4090-O24G-GAMING</p>
+                            </div>
+                            <div class="text-center">
+                                <span class="font-semibold text-xs text-cm-purple-10">$29,000</span>
+                            </div>
+                            <div class="text-center text-white">
+                                <i class="fa-solid fa-xmark text-cm-red-1"></i>
+                                <span class="ml-1 font-semibold text-xs">SIN EXISTENCIA</span>
+                            </div>
+                        </div>
+                        <!-- Agregar a carrito || Lista deseos -->
+                        <button class="btn-cart-list absolute top-[-6px] right-[-10px] z-10 w-10 h-10 rounded-full border-2 bg-cm-blue-2 border-cm-blue-7">
+                            <i class="fa-solid fa-receipt text-cm-blue-7 text-lg"></i>
+                        </button>
+                        <button class="btn-cart-list absolute top-[-6px] right-[-10px] 
+                            z-10 w-10 h-10 rounded-full border-2 bg-cm-blue-2 border-cm-blue-7
+                            hover:bg-sky-800 hover:border-sky-400">
+                            <i class="fa-solid fa-receipt text-cm-blue-7 text-lg"></i>
+                        </button>
+                    </div>
+                    <!-- Producto 5 -->
+                    <div class="flex flex-col min-w-36 border-2 rounded-xl border-cm-gray-8 relative group-product">
+                        <div class="divide-y-2 divide-cm-gray-8">
+                            <div class="flex justify-center p-1 gap-2">
+                                <img class="w-5 h-auto" src="Images/etiqueta-new.png" alt="">
+                                <img class="w-5 h-auto" src="Images/etiqueta-desc.png" alt="">
+                                <img class="w-5 h-auto" src="Images/etiqueta-exclusive.png" alt="">
+                                <img class="w-5 h-auto" src="Images/etiqueta-envio.png" alt="">
+                            </div>
+                            <div class="flex w-full justify-center bg-white">
+                                <img class="w-auto h-28 object-contain" src="Images/procesador-prueba.png" alt="producto de prueba">
+                            </div>
+                            <div class="text-cm-gray-10 leading-4">
+                                <p class="line-clamp-3">Procesador Intel Core Ultra 7 265K / 20 Nucleos (8P+12E) / 3.9 GHz / LGA1851 / Intel Graphics / 125w / BX80768265K</p>
+                            </div>
+                            <div class="text-center">
+                                <span class="font-semibold text-xs text-cm-purple-10">$29,000</span>
+                            </div>
+                            <div class="text-center text-white">
+                                <i class="fa-solid fa-check text-cm-green-1"></i>
+                                <span class="ml-1 font-semibold text-xs">CON EXISTENCIA</span>
+                            </div>
+                        </div>
+                        <!-- Agregar a carrito || Lista deseos -->
+                        <button class="btn-cart-list absolute top-[-6px] right-[-10px] 
+                            z-10 w-10 h-10 rounded-full border-2 bg-cm-green-2 border-cm-green-1
+                            hover:bg-green-800 hover:border-green-400">
+                            <i class="fa-solid fa-cart-plus text-cm-green-1 text-lg"></i>
+                        </button>
+                    </div>
+                    
+                </div>
 
             </div>
         </div>

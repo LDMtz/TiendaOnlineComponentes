@@ -1,11 +1,11 @@
 <header>
   <!-- Barra de navegación -->
   <nav class="bg-cm-purple-1">
-    <div class="flex items-center justify-between h-12 mx-5 ">
+    <div class="flex items-center justify-between h-12 mx-5">
       <!-- Logo y Nombre -->
       <a href="{{ route('default_home') }}" class="flex items-center">
         <img class="w-9 h-9" src="{{ asset('images/logo.png') }}" alt="">
-        <span class="text-lg ml-3 font-bold font-sans text-white">Belikekis Components</span>
+        <span class="text-lg ml-3 font-bold font-sans text-white hover:text-cm-purple-9">Belikekis Components</span>
     </a>
 
       <div class="flex items-center text-lg text-white space-x-5">
@@ -20,7 +20,7 @@
         </div>
 
         <!-- Flecha -->
-        <button type="button" class="ml-4">
+        <button type="button" class="ml-4 hover:text-cm-purple-9">
           <i class="fa-solid fa-chevron-down "></i>
         </button>
 
@@ -31,22 +31,22 @@
         </div>
 
         <!-- Campana de notificaciones -->
-        <button type="button" class="">
+        <button type="button" class="hover:text-cm-purple-9">
           <i class="fa-solid fa-bell"></i>
         </button>
 
         <!-- Botón de carrito de compras blanco, sin fondo -->
-        <button type="button" class="">
+        <button type="button" class="hover:text-cm-purple-9">
           <i class="fa-solid fa-cart-shopping"></i>
         </button>
 
         <!-- Botón login -->
-        <a href="{{route('login')}}" class="">
+        <a href="{{route('login')}}" class="hover:text-cm-purple-9">
           <i class="fa-solid fa-right-to-bracket"></i>
         </a>
 
         <!-- Botón logout -->
-        <a href="{{route('to_logout')}}" class="">
+        <a href="{{route('to_logout')}}" class="hover:text-cm-purple-9">
           <i class="fa-solid fa-right-from-bracket"></i>
         </a>
 

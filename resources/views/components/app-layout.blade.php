@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Belikekis Components - Tienda Online</title>
     @vite('resources/css/app.css')
+    @vite('resources/css/custom_styles.css')
 </head>
 <body class="bg-cm-gray-1 min-h-screen flex flex-col">
     <x-header />
