@@ -37,7 +37,7 @@ class AccountController extends Controller
             'username' => 'required|string|max:50|unique:accounts,username', // Limita la longitud y asegura unicidad
             'email' => 'required|email|max:200|unique:accounts,email', // Limita la longitud y asegura unicidad
             'password' => 'required|string|min:8|confirmed', // Mínimo de 8 caracteres y debe ser confirmado
-            'picture_profile' => 'nullable|image|max:2048', // Archivo de imagen opcional con un tamaño máximo de 2MB
+            'picture_profile' => 'nullable|image|max:64', // Archivo de imagen opcional con un tamaño máximo de 2MB
             'names' => 'required|string|max:100', // Limita la longitud
             'last_names' => 'required|string|max:100', // Limita la longitud
             'number' => 'required|string|size:10', // Número obligatorio con una longitud exacta de 10

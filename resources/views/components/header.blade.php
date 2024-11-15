@@ -8,47 +8,56 @@
         <span class="text-lg ml-3 font-bold font-sans text-white hover:text-cm-purple-9">Belikekis Components</span>
     </a>
 
+
       <div class="flex items-center text-lg text-white space-x-5">
-        <!-- Campo de búsqueda -->
-        <div class="relative text-gray-300 focus-within:text-white">
+        @auth
+          <!-- Campo de búsqueda -->
+          <div class="relative text-gray-300 focus-within:text-white">
             <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 transform -translate-y-1/2 text-white text-base"></i>
             <input
                 type="search"
                 class="w-64 pl-10 py-1 rounded-2xl text-sm border border-black bg-cm-purple-4 focus:outline-none"
                 placeholder="Buscar..."
             />
+          </div>
+
+          <!-- Flecha -->
+          <button type="button" class="ml-4 hover:text-cm-purple-9">
+            <i class="fa-solid fa-chevron-down "></i>
+          </button>
+
+          <!--Usuario -->
+          <div class="flex items-center ml-4 text-base">
+            @php
+                $user = Auth::user(); // Asegúrate de obtener el usuario autenticado
+                $imageData = $user->picture_profile ? 'data:image/jpeg;base64,'.base64_encode($user->picture_profile) : asset('images/default-user-profile.jpg');
+            @endphp
+            <img class="h-8 w-8 rounded-full" src="{{ $imageData }}" alt="{{ $user->username }}">
+            <span class="ml-3">{{ $user->username }}</span>
         </div>
 
-        <!-- Flecha -->
-        <button type="button" class="ml-4 hover:text-cm-purple-9">
-          <i class="fa-solid fa-chevron-down "></i>
-        </button>
+          <!-- Campana de notificaciones -->
+          <button type="button" class="hover:text-cm-purple-9">
+            <i class="fa-solid fa-bell"></i>
+          </button>
 
-        <!--Usuario -->
-        <div class="flex items-center ml-4 text-base">
-          <img class="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
-          <span class="ml-3">Javier Zamudio</span>
-        </div>
+          <!-- Botón de carrito de compras blanco, sin fondo -->
+          <button type="button" class="hover:text-cm-purple-9">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </button>
 
-        <!-- Campana de notificaciones -->
-        <button type="button" class="hover:text-cm-purple-9">
-          <i class="fa-solid fa-bell"></i>
-        </button>
+          <!-- Botón logout -->
+          <a href="{{route('to_logout')}}" class="hover:text-cm-purple-9">
+            <i class="fa-solid fa-right-from-bracket"></i>
+          </a>
+        @else
+          <!-- Botón login -->
+          <a href="{{route('login')}}" class="hover:text-cm-purple-9">
+            <i class="fa-solid fa-right-to-bracket"></i>
+          </a>
+        @endauth
 
-        <!-- Botón de carrito de compras blanco, sin fondo -->
-        <button type="button" class="hover:text-cm-purple-9">
-          <i class="fa-solid fa-cart-shopping"></i>
-        </button>
 
-        <!-- Botón login -->
-        <a href="{{route('login')}}" class="hover:text-cm-purple-9">
-          <i class="fa-solid fa-right-to-bracket"></i>
-        </a>
-
-        <!-- Botón logout -->
-        <a href="{{route('to_logout')}}" class="hover:text-cm-purple-9">
-          <i class="fa-solid fa-right-from-bracket"></i>
-        </a>
 
       </div>
     </div>
