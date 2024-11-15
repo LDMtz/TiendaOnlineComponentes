@@ -9,15 +9,23 @@ use App\Http\Controllers\AccountController;
 Route::middleware([GuestMiddleware::class])->group(function(){
 
 });*/
+Route::middleware("guest")->group(function(){
 
-Route::get('/', [AuthController::class, 'index'])-> name('default_home'); //<-- Solo el home de invitados
-Route::get('/login', [AuthController::class, 'login_form'])-> name('login');
-Route::get('/clients/register', [ClientController::class, 'create'])-> name('register');
-Route::post('/to-login', [AuthController::class, 'to_login'])-> name('to_login');
-Route::post('/store', [AccountController::class, 'store'])->name('store');
+});
 
-Route::get('/home', [AuthController::class, 'home'])-> name('home');
-Route::get('/to-logout', [AuthController::class, 'to_logout'])-> name('to_logout');
+Route::middleware("guest")->group(function(){
+    Route::get('/', [AuthController::class, 'index'])-> name('default_home'); //<-- Solo el home de invitados
+    Route::get('/login', [AuthController::class, 'login_form'])-> name('login');
+    Route::get('/clients/register', [ClientController::class, 'create'])-> name('register');
+    Route::post('/to-login', [AuthController::class, 'to_login'])-> name('to_login');
+    Route::post('/store', [AccountController::class, 'store'])->name('store');
+});
+
+Route::middleware("auth")->group(function(){
+    Route::get('/home', [AuthController::class, 'home'])-> name('home');
+    Route::get('/to-logout', [AuthController::class, 'to_logout'])-> name('to_logout');
+});
+
 
 /*
 //Necesitar validarte para acceder a estas rutas

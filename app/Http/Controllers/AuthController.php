@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 
+use App\Models\Account;
+
 class AuthController extends Controller
 {
     public function index(){
@@ -38,10 +40,15 @@ class AuthController extends Controller
             'password' => $request->password,
         ];
         
+        //if (Auth::guard('custom_guard')->attempt($credentials)) {
         if(Auth::attempt($credentials)){
-            //$request->session()->regenerate();
+            $request->session()->regenerate();
             //dd(Auth::user());
-            return to_route('home');
+            //dd(Auth::check()); 
+            //dd(Auth::user()); 
+            //session()->put('user_id', Auth::id());
+            //dd(session()->all());
+            return redirect()->route('home');
         }else{
             return back()->withErrors(['login' => 'Credenciales incorrectas']);
         }

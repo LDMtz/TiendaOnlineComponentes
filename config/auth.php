@@ -40,6 +40,10 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+        'custom_guard' => [
+            'driver' => 'session',
+            'provider' => 'accounts',
+        ],
         /*
         'accounts' => [
             'driver' => 'session',

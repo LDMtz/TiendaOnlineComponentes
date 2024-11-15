@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 
@@ -12,9 +13,11 @@ use Illuminate\Contracts\Auth\Authenticatable;
 
 class Account extends Model implements Authenticatable
 {
-    use HasFactory;
+    use HasFactory, Notifiable;
 
     protected $table = 'accounts';
+
+    protected $primaryKey = 'id';
 
     protected $fillable = [
         'role_id',
@@ -29,6 +32,14 @@ class Account extends Model implements Authenticatable
         'password',
         'remember_token',
     ];
+
+    protected function casts(): array
+    {
+        return [
+            'email_verified_at' => 'datetime',
+            'password' => 'hashed',
+        ];
+    }
 
     //Relación con el modelo Employee. (uno-uno)
     public function employee(): HasOne
@@ -52,12 +63,12 @@ class Account extends Model implements Authenticatable
     //PARA LA AUTENTICACION
     public function getAuthIdentifierName()
     {
-        return 'email';
+        return 'id';
     }
 
     public function getAuthIdentifier()
     {
-        return $this->getAttribute('email');
+        return $this->getAttribute('id');
     }
 
     public function getAuthPassword()
