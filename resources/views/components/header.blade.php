@@ -21,10 +21,63 @@
             />
           </div>
 
-          <!-- Flecha -->
-          <button type="button" class="ml-4 hover:text-cm-purple-9">
-            <i class="fa-solid fa-chevron-down "></i>
-          </button>
+          <!-- Contenedor principal del dropdown -->
+          <div class="relative inline-block">
+            <!-- Botón del Dropdown -->
+            <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" type="button" class="hover:text-cm-purple-9">
+              <i class="fa-solid fa-chevron-down" id="chevronDownIcon"></i>
+              <i class="fa-solid fa-chevron-up hidden" id="chevronUpIcon"></i>
+            </button>
+
+            <!-- Dropdown Menu -->
+            <div id="dropdown" class="z-10 hidden bg-cm-gray-6 divide-y rounded-b-lg shadow w-44 absolute top-full left-0 mt-2 py-2">
+              <ul class="text-base text-white" aria-labelledby="dropdownDefaultButton">
+                <li class="flex items-center hover:bg-gray-600">
+                  <a href="{{ route('client_edit') }}" class="block px-3 py-2 text-dark">
+                    <i class="fa-solid fa-user text-cm-purple-3 mr-2"></i>
+                    <span>Perfil</span>
+                  </a>
+                </li>
+                <li class="flex items-center hover:bg-gray-600">
+                  <a href="{{ route('client_purchases') }}" class="block px-3 py-2 text-dark">
+                    <i class="fa-brands fa-shopify text-cm-purple-3 mr-2"></i>
+                    <span>Mis compras</span>
+                  </a>
+                </li>
+                <li class="flex items-center hover:bg-gray-600">
+                  <a href="{{ route('client_bills') }}" class="block px-3 py-2 text-dark">
+                    <i class="fa-solid fa-file-invoice-dollar text-cm-purple-3 mr-2"></i>
+                    <span>Mis facturas</span>
+                  </a>
+                </li>
+                <li class="flex items-center hover:bg-gray-600">
+                  <a href="#" class="block px-3 py-2 text-dark">
+                    <i class="fa-solid fa-location-dot text-cm-purple-3 mr-2"></i>
+                    <span>Mis direcciones</span>
+                  </a>
+                </li>
+                <li class="flex items-center hover:bg-gray-600">
+                  <a href="#" class="block px-3 py-2 text-dark">
+                    <i class="fa-solid fa-user text-cm-purple-3 mr-2"></i>
+                    <span>Mis facturas</span>
+                  </a>
+                </li>
+                <li class="flex items-center hover:bg-gray-600">
+                  <a href="#" class="block px-3 py-2 text-dark">
+                    <i class="fa-solid fa-star text-cm-purple-3 mr-2"></i>
+                    <span>Mis reseñas</span>
+                  </a>
+                </li>
+                <li class="flex items-center hover:bg-gray-600">
+                  <a href="#" class="block px-3 py-2 text-dark">
+                    <i class="fa-solid fa-rectangle-list text-cm-purple-3 mr-2"></i>
+                    <span>Lista de deseos</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+          </div>
 
           <!--Usuario -->
           <div class="flex items-center ml-4 text-base">
@@ -63,3 +116,30 @@
     </div>
   </nav>
 </header>
+
+<script>
+  // Obtener los elementos
+  const dropdownButton = document.getElementById('dropdownDefaultButton');
+  const dropdownMenu = document.getElementById('dropdown');
+  const chevronDownIcon = document.getElementById('chevronDownIcon');
+  const chevronUpIcon = document.getElementById('chevronUpIcon');
+
+  // Función para alternar la visibilidad del dropdown
+  dropdownButton.addEventListener('click', function () {
+    // Alternar la clase 'hidden' en el menú
+    dropdownMenu.classList.toggle('hidden');
+    
+    // Alternar la visibilidad de los íconos
+    chevronDownIcon.classList.toggle('hidden');
+    chevronUpIcon.classList.toggle('hidden');
+  });
+
+  // Cerrar el dropdown si se hace clic fuera de él
+  document.addEventListener('click', function (event) {
+    if (!dropdownMenu.contains(event.target) && !dropdownButton.contains(event.target)) {
+      dropdownMenu.classList.add('hidden');
+      chevronDownIcon.classList.remove('hidden');
+      chevronUpIcon.classList.add('hidden');
+    }
+  });
+</script>

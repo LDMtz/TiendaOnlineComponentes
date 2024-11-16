@@ -10,13 +10,13 @@
                 <label for="email" class="text-cm-blue-3 text-md font-bold">Correo electrónico:</label>
                 <div class="relative mb-4">
                     <i class="fa-solid fa-envelope absolute left-2 top-1/2 transform -translate-y-1/2 text-cm-blue-3"></i>
-                    <input name="email" type="email" class="py-1 text-sm border-2 rounded-lg pl-7 border-cm-purple-3 bg-cm-purple-4 text-cm-blue-3 focus:outline-none focus:border-cm-blue-1 focus:text-white w-full">
+                    <input name="email" type="email" autocomplete="off" class="py-1 text-sm border-2 rounded-lg pl-7 border-cm-purple-3 bg-cm-purple-4 text-cm-blue-3 focus:outline-none focus:border-cm-blue-1 focus:text-white w-full">
                 </div>
 
                 <label for="password" class="text-cm-blue-3 text-md font-bold">Contraseña:</label>
                 <div class="relative ">
                     <i class="fa-solid fa-key absolute left-2 top-1/2 transform -translate-y-1/2 text-cm-blue-3"></i>
-                    <input name="password" type="password" class="py-1 text-sm border-2 rounded-lg pl-7 border-cm-purple-3 bg-cm-purple-4 text-cm-blue-3 focus:outline-none focus:border-cm-blue-1 focus:text-white w-full">
+                    <input name="password" type="password" autocomplete="off" class="py-1 text-sm border-2 rounded-lg pl-7 border-cm-purple-3 bg-cm-purple-4 text-cm-blue-3 focus:outline-none focus:border-cm-blue-1 focus:text-white w-full">
                 </div>
 
                 <!-- Mostrar errores -->

@@ -9,20 +9,29 @@
                     <div class="text-3xl text-center font-extrabold truncate mb-4 bg-cm-gray-3 text-cm-gray-5 p-4 w-full rounded-t-2xl">
                         CATEGORIAS
                     </div>
-    
-                    <!-- Componente de Categoría -->
-                    <li class="p-2 mx-3 flex items-center bg-cm-gray-3 rounded-lg hover:border-x-8 border-cm-purple-3">
-                        <i class="fa-solid fa-memory text-cm-purple-2 mr-4 ml-8"></i>
-                        <span class="text-cm-purple-2 font-bold">COMPONENTES</span>
+
+                    <!-- Componentes (con subcategorías) -->
+                    <li class="mx-3 dropdown-category list-none">
+                        <div class="p-2 flex items-center bg-cm-gray-3 rounded-lg hover:border-x-8 border-cm-purple-3">
+                            <i class="fa-solid fa-memory text-cm-purple-2 mr-4 ml-8"></i>
+                            <span class="text-cm-purple-2 font-bold">COMPONENTES</span>
+                        </div>
+                        <ul class="dropdown-list hidden text-white mx-4">
+                            <li><a href="#" class="p-2 hover:bg-cm-gray-6 hover:text-cm-purple-9 flex items-center border-b-2 border-cm-gray-8">Procesador</a></li>
+                            <li><a href="#" class="p-2 hover:bg-cm-gray-6 hover:text-cm-purple-9 flex items-center border-b-2 border-cm-gray-8">Placa madre</a></li>
+                            <li><a href="#" class="p-2 hover:bg-cm-gray-6 hover:text-cm-purple-9 flex items-center border-b-2 border-cm-gray-8">Tarjeta de video</a></li>
+                            <li><a href="#" class="p-2 hover:bg-cm-gray-6 hover:text-cm-purple-9 flex items-center border-b-2 border-cm-gray-8">Memoria RAM</a></li>
+                            <li><a href="#" class="p-2 hover:bg-cm-gray-6 hover:text-cm-purple-9 flex items-center border-b-2 border-cm-gray-8">Unidades SSD</a></li>
+                        </ul>
                     </li>
     
                     <!-- Audio (con subcategorías) -->
-                    <li class="mx-3 opcion-con-desplegable list-none">
+                    <li class="mx-3 dropdown-category list-none">
                         <div class="p-2 flex items-center bg-cm-gray-3 rounded-lg hover:border-x-8 border-cm-purple-3">
                             <i class="fa-solid fa-headphones text-cm-purple-2 mr-4 ml-8"></i>
                             <span class="text-cm-purple-2 font-bold">AUDIO</span>
                         </div>
-                        <ul class="desplegable hidden text-white mx-4">
+                        <ul class="dropdown-list hidden text-white mx-4">
                             <li><a href="#" class="p-2 hover:bg-cm-gray-6 hover:text-cm-purple-9 flex items-center border-b-2 border-cm-gray-8">Bocinas</a></li>
                             <li><a href="#" class="p-2 hover:bg-cm-gray-6 hover:text-cm-purple-9 flex items-center border-b-2 border-cm-gray-8">Auriculares</a></li>
                             <li><a href="#" class="p-2 hover:bg-cm-gray-6 hover:text-cm-purple-9 flex items-center border-b-2 border-cm-gray-8">Barra de sonido</a></li>
@@ -96,36 +105,36 @@
                         <div class="grid grid-cols-2 gap-y-2 gap-x-4">
                             <!-- Botón con imagen -->
                             <button class="flex items-center justify-center bg-cm-gray-3 rounded-lg hover:bg-cm-purple-2 transition w-full h-12">
-                                <img src="Images/nvidia_logo.png" alt="logo de nvidia" class="w-full h-full object-contain">
+                                <img src="{{ asset('images/nvidia_logo.png') }}" alt="logo de nvidia" class="w-full h-full object-contain">
                             </button>
-
+                            
                             <button class="flex items-center justify-center bg-cm-gray-3 rounded-lg hover:bg-cm-purple-2 transition w-full h-12">
-                                <img src="Images/amd-logo.png" alt="logo de amd" class="w-full h-full object-contain">
+                                <img src="{{ asset('images/amd-logo.png') }}" alt="logo de amd" class="w-full h-full object-contain">
                             </button>
-
+                            
                             <button class="flex items-center justify-center bg-cm-gray-3 rounded-lg hover:bg-cm-purple-2 transition w-full h-12">
-                                <img src="Images/intel-logo.png" alt="logo de intel" class="w-full h-full object-contain">
+                                <img src="{{ asset('images/intel-logo.png') }}" alt="logo de intel" class="w-full h-full object-contain">
                             </button>
-
+                            
                             <button class="flex items-center justify-center bg-cm-gray-3 rounded-lg hover:bg-cm-purple-2 transition w-full h-12">
-                                <img src="Images/msi-logo.png" alt="logo de msi" class="w-full h-full object-contain">
+                                <img src="{{ asset('images/msi-logo.png') }}" alt="logo de msi" class="w-full h-full object-contain">
                             </button>
-
+                            
                             <button class="flex items-center justify-center bg-cm-gray-3 rounded-lg hover:bg-cm-purple-2 transition w-full h-12">
-                                <img src="Images/asus-logo.png" alt="logo de asus" class="w-full h-full object-contain">
+                                <img src="{{ asset('images/asus-logo.png') }}" alt="logo de asus" class="w-full h-full object-contain">
                             </button>
-
+                            
                             <button class="flex items-center justify-center bg-cm-gray-3 rounded-lg hover:bg-cm-purple-2 transition w-full h-12">
-                                <img src="Images/Corsair-logo.png" alt="logo de corsair" class="w-full h-full object-contain">
+                                <img src="{{ asset('images/Corsair-logo.png') }}" alt="logo de corsair" class="w-full h-full object-contain">
                             </button>
-
+                            
                             <button class="flex items-center justify-center bg-cm-gray-3 rounded-lg hover:bg-cm-purple-2 transition w-full h-12">
-                                <img src="Images/aorus-logo.png" alt="logo de aorus" class="w-full h-full object-contain">
+                                <img src="{{ asset('images/aorus-logo.png') }}" alt="logo de aorus" class="w-full h-full object-contain">
                             </button>
-
+                            
                             <button class="flex items-center justify-center bg-cm-gray-3 rounded-lg hover:bg-cm-purple-2 transition w-full h-12">
-                                <img src="Images/xpg-logo.png" alt="logo de xpg" class="w-full h-full object-contain">
-                            </button>
+                                <img src="{{ asset('images/xpg-logo.png') }}" alt="logo de xpg" class="w-full h-full object-contain">
+                            </button>                            
 
                         </div>
                     </div>
@@ -134,49 +143,50 @@
                 </div>
                 <!-- Carrusel -->
                 <div id="carousel" class="col-span-3 mt-4 overflow-hidden shadow-[0_0_15px_5px_rgba(107,14,221,0.5)] h-72">
-                    <img src="Images/Banner.png" class="w-full h-full object-cover" alt="Banner">
-                    <img src="Images/Banner-2.png" class="w-full h-full object-cover hidden" alt="Banner">
-                    <img src="Images/Banner-3.png" class="w-full h-full hidden" alt="Banner">
-                    <img src="Images/Banner-4.png" class="w-full h-full hidden" alt="Banner">
-                    <img src="Images/Banner-5.jpg" class="w-full h-full hidden" alt="Banner">
+                    <img src="{{ asset('images/Banner.png') }}" class="w-full h-full object-cover" alt="Banner">
+                    <img src="{{ asset('images/Banner-2.png') }}" class="w-full h-full object-cover hidden" alt="Banner">
+                    <img src="{{ asset('images/Banner-3.png') }}" class="w-full h-full hidden" alt="Banner">
+                    <img src="{{ asset('images/Banner-4.png') }}" class="w-full h-full hidden" alt="Banner">
+                    <img src="{{ asset('images/Banner-5.jpg') }}" class="w-full h-full hidden" alt="Banner">
                 </div>
+                
     
                 <!-- Métodos de pago -->
                 <div class="col-span-1 mt-4">
                     <div class="bg-cm-gray-2 text-white p-4 rounded-lg w-full md:w-100 shadow-lg border-2 border-cm-gray-6">
-                        <span class="text-base mb-4 block font-extrabold text-cm-gray-5 text-center">MÉTODOS DE PAGO</span>
+                        <span class="text-base mb-4 block font-extrabold text-cm-gray-5 text-center">DESCUENTOS</span>
                         <div class="grid grid-cols-2 gap-y-2 gap-x-4">
                             <!-- Botón con imagen -->
-                            <button class="flex items-center justify-center bg-cm-gray-3 rounded-lg hover:bg-cm-purple-2 transition w-full h-12">
-                                <img src="Images/paypal-logo.png" alt="logo de paypal" class="w-full h-full object-contain">
+                            <button class="flex items-center justify-center bg-cm-gray-3 rounded-lg transition w-full h-12 overflow-hidden">
+                                <img src="{{ asset('images/desc/10_desc.png') }}" alt="logo de paypal" class="w-full h-full object-cover">
                             </button>
 
-                            <button class="flex items-center justify-center bg-cm-gray-3 rounded-lg hover:bg-cm-purple-2 transition w-full h-12">
-                                <img src="Images/oxxo-logo.png" alt="logo de nvidia" class="w-full h-full object-contain">
+                            <button class="flex items-center justify-center bg-cm-gray-3 rounded-lg transition w-full h-12 overflow-hidden">
+                                <img src="{{ asset('images/desc/20_desc.png') }}" alt="logo de paypal" class="w-full h-full object-cover">
                             </button>
 
-                            <button class="flex items-center justify-center bg-cm-gray-3 rounded-lg hover:bg-cm-purple-2 transition w-full h-12">
-                                <img src="Images/visa-logo.png" alt="Intel" class="w-full h-full object-contain">
+                            <button class="flex items-center justify-center bg-cm-gray-3 rounded-lg transition w-full h-12 overflow-hidden">
+                                <img src="{{ asset('images/desc/30_desc.png') }}" alt="logo de paypal" class="w-full h-full object-cover">
                             </button>
 
-                            <button class="flex items-center justify-center bg-cm-gray-3 rounded-lg hover:bg-cm-purple-2 transition w-full h-12">
-                                <img src="Images/mastercard-logo.png" alt="msi" class="w-full h-full object-contain">
+                            <button class="flex items-center justify-center bg-cm-gray-3 rounded-lg transition w-full h-12 overflow-hidden">
+                                <img src="{{ asset('images/desc/40_desc.png') }}" alt="logo de paypal" class="w-full h-full object-cover">
                             </button>
 
-                            <button class="flex items-center justify-center bg-cm-gray-3 rounded-lg hover:bg-cm-purple-2 transition w-full h-12">
-                                <img src="Images/spe-logo.png" alt="ASUS" class="w-full h-full object-contain">
+                            <button class="flex items-center justify-center bg-cm-gray-3 rounded-lg transition w-full h-12 overflow-hidden">
+                                <img src="{{ asset('images/desc/50_desc.png') }}" alt="logo de paypal" class="w-full h-full object-cover">
                             </button>
 
-                            <button class="flex items-center justify-center bg-cm-gray-3 rounded-lg hover:bg-cm-purple-2 transition w-full h-12">
-                                <img src="Images/applepay-logo.png" alt="Corsair" class="w-full h-full object-contain">
+                            <button class="flex items-center justify-center bg-cm-gray-3 rounded-lg transition w-full h-12 overflow-hidden">
+                                <img src="{{ asset('images/desc/60_desc.png') }}" alt="logo de paypal" class="w-full h-full object-cover">
                             </button>
 
-                            <button class="flex items-center justify-center bg-cm-gray-3 rounded-lg hover:bg-cm-purple-2 transition w-full h-12">
-                                <img src="Images/googlepay-logo.png" alt="AORUS" class="w-full h-full object-contain">
+                            <button class="flex items-center justify-center bg-cm-gray-3 rounded-lg transition w-full h-12 overflow-hidden">
+                                <img src="{{ asset('images/desc/70_desc.png') }}" alt="logo de paypal" class="w-full h-full object-cover">
                             </button>
 
-                            <button class="flex items-center justify-center bg-cm-gray-3 rounded-lg hover:bg-cm-purple-2 transition w-full h-12">
-                                <img src="Images/mercadopago-logo.png" alt="XPG" class="w-full h-full object-contain">
+                            <button class="flex items-center justify-center bg-cm-gray-3 rounded-lg transition w-full h-12 overflow-hidden">
+                                <img src="{{ asset('images/desc/80_desc.png') }}" alt="logo de paypal" class="w-full h-full object-cover">
                             </button>
 
                         </div>
@@ -693,13 +703,13 @@
     // Opciones desplegables de las categorías 
     document.addEventListener("DOMContentLoaded", function () {
       // Obtener todas las opciones principales con desplegables
-      const opcionesConDesplegable = document.querySelectorAll(".opcion-con-desplegable");
+      const opcionesConDesplegable = document.querySelectorAll(".dropdown-category");
 
       // Agregar evento de clic a cada opción principal
       opcionesConDesplegable.forEach(function (opcion) {
         opcion.addEventListener("click", function () {
           // Obtener el desplegable asociado a la opción
-          const desplegable = opcion.querySelector(".desplegable");
+          const desplegable = opcion.querySelector(".dropdown-list");
 
           // Alternar la clase "hidden" para mostrar u ocultar el desplegable
           desplegable.classList.toggle("hidden");

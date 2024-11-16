@@ -15,7 +15,7 @@
                             <label for="names" class="text-cm-blue-3 text-md font-bold">Nombres:</label>
                             <div class="relative">
                                 <i class="fa-solid fa-user-group absolute left-2 top-1/2 transform -translate-y-1/2 text-cm-blue-3"></i>
-                                <input name="names" type="text" required class="py-1 text-sm border-2 rounded-lg pl-7 border-cm-purple-3 bg-cm-purple-4 text-cm-blue-3 focus:outline-none focus:border-cm-blue-1 focus:text-white w-full">
+                                <input name="names" type="text" required autocomplete="off" class="py-1 text-sm border-2 rounded-lg pl-7 border-cm-purple-3 bg-cm-purple-4 text-cm-blue-3 focus:outline-none focus:border-cm-blue-1 focus:text-white w-full">
                             </div>
                             @error('names')
                                 <div class="text-red-500 text-sm">{{ $message }}</div>
@@ -27,7 +27,7 @@
                             <label for="username" class="text-cm-blue-3 text-md font-bold">Nombre de usuario:</label>
                             <div class="relative">
                                 <i class="fa-solid fa-circle-user absolute left-2 top-1/2 transform -translate-y-1/2 text-cm-blue-3"></i>
-                                <input name="username" type="text" required class="py-1 text-sm border-2 rounded-lg pl-7 border-cm-purple-3 bg-cm-purple-4 text-cm-blue-3 focus:outline-none focus:border-cm-blue-1 focus:text-white w-full">
+                                <input name="username" type="text" required autocomplete="off" class="py-1 text-sm border-2 rounded-lg pl-7 border-cm-purple-3 bg-cm-purple-4 text-cm-blue-3 focus:outline-none focus:border-cm-blue-1 focus:text-white w-full">
                             </div>
                             @error('username')
                                 <div class="text-red-500 text-sm">{{ $message }}</div>
@@ -39,7 +39,7 @@
                             <label for="password" class="text-cm-blue-3 text-md font-bold">Contraseña:</label>
                             <div class="relative">
                                 <i class="fa-solid fa-key absolute left-2 top-1/2 transform -translate-y-1/2 text-cm-blue-3"></i>
-                                <input name="password" type="password" required class="py-1 text-sm border-2 rounded-lg pl-7 border-cm-purple-3 bg-cm-purple-4 text-cm-blue-3 focus:outline-none focus:border-cm-blue-1 focus:text-white w-full">
+                                <input name="password" type="password" required autocomplete="off" class="py-1 text-sm border-2 rounded-lg pl-7 border-cm-purple-3 bg-cm-purple-4 text-cm-blue-3 focus:outline-none focus:border-cm-blue-1 focus:text-white w-full">
                             </div>
                             @error('password')
                                 <div class="text-red-500 text-sm">{{ $message }}</div>
@@ -51,7 +51,7 @@
                             <label for="email" class="text-cm-blue-3 text-md font-bold">Correo electrónico:</label>
                             <div class="relative">
                                 <i class="fa-solid fa-envelope absolute left-2 top-1/2 transform -translate-y-1/2 text-cm-blue-3"></i>
-                                <input name="email" type="email" required class="py-1 text-sm border-2 rounded-lg pl-7 border-cm-purple-3 bg-cm-purple-4 text-cm-blue-3 focus:outline-none focus:border-cm-blue-1 focus:text-white w-full">
+                                <input name="email" type="email" required autocomplete="off" class="py-1 text-sm border-2 rounded-lg pl-7 border-cm-purple-3 bg-cm-purple-4 text-cm-blue-3 focus:outline-none focus:border-cm-blue-1 focus:text-white w-full">
                             </div>
                             @error('email')
                                 <div class="text-red-500 text-sm">{{ $message }}</div>
@@ -65,7 +65,7 @@
                             <label for="last_names" class="text-cm-blue-3 text-md font-bold">Apellidos:</label>
                             <div class="relative">
                                 <i class="fa-solid fa-address-card absolute left-2 top-1/2 transform -translate-y-1/2 text-cm-blue-3"></i>
-                                <input name="last_names" type="text" required class="py-1 text-sm border-2 rounded-lg pl-7 border-cm-purple-3 bg-cm-purple-4 text-cm-blue-3 focus:outline-none focus:border-cm-blue-1 focus:text-white w-full">
+                                <input name="last_names" type="text" required autocomplete="off" class="py-1 text-sm border-2 rounded-lg pl-7 border-cm-purple-3 bg-cm-purple-4 text-cm-blue-3 focus:outline-none focus:border-cm-blue-1 focus:text-white w-full">
                             </div>
                             @error('last_names')
                                 <div class="text-red-500 text-sm">{{ $message }}</div>
@@ -76,7 +76,7 @@
                             <label for="number" class="text-cm-blue-3 text-md font-bold">Teléfono:</label>
                             <div class="relative">
                                 <i class="fa-solid fa-phone absolute left-2 top-1/2 transform -translate-y-1/2 text-cm-blue-3"></i>
-                                <input name="number" type="text" required class="py-1 text-sm border-2 rounded-lg pl-7 border-cm-purple-3 bg-cm-purple-4 text-cm-blue-3 focus:outline-none focus:border-cm-blue-1 focus:text-white w-full">
+                                <input name="number" type="text" required autocomplete="off" class="py-1 text-sm border-2 rounded-lg pl-7 border-cm-purple-3 bg-cm-purple-4 text-cm-blue-3 focus:outline-none focus:border-cm-blue-1 focus:text-white w-full">
                             </div>
                             @error('number')
                                 <div class="text-red-500 text-sm">{{ $message }}</div>
@@ -87,7 +87,7 @@
                             <label for="password_confirmation" class="text-cm-blue-3 text-md font-bold">Cofirmar Contraseña:</label>
                             <div class="relative">
                                 <i class="fa-solid fa-key absolute left-2 top-1/2 transform -translate-y-1/2 text-cm-blue-3"></i>
-                                <input name="password_confirmation" type="password" required class="py-1 text-sm border-2 rounded-lg pl-7 border-cm-purple-3 bg-cm-purple-4 text-cm-blue-3 focus:outline-none focus:border-cm-blue-1 focus:text-white w-full">
+                                <input name="password_confirmation" type="password" required autocomplete="off" class="py-1 text-sm border-2 rounded-lg pl-7 border-cm-purple-3 bg-cm-purple-4 text-cm-blue-3 focus:outline-none focus:border-cm-blue-1 focus:text-white w-full">
                             </div>
                             @error('password_confirmation')
                                 <div class="text-red-500 text-sm mt-0">{{ $message }}</div>

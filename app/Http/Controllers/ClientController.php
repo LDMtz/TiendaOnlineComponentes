@@ -34,9 +34,21 @@ class ClientController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit() //FALTA PASARLE EL ID
     {
         return view('clients.edit');
+    }
+
+
+    /* TEMPORTALES -> MOVEL AL CONTROLADOR COMPRAS */
+    public function my_purchases() //FALTA PASARLE EL ID
+    {
+        return view('clients.tmp_purchases');
+    }
+
+    public function my_bills() //FALTA PASARLE EL ID
+    {
+        return view('clients.tmp_bills');
     }
 
     /**

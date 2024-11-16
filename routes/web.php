@@ -14,16 +14,30 @@ Route::middleware("guest")->group(function(){
 });
 
 Route::middleware("guest")->group(function(){
+    //Auth
     Route::get('/', [AuthController::class, 'index'])-> name('default_home'); //<-- Solo el home de invitados
     Route::get('/login', [AuthController::class, 'login_form'])-> name('login');
-    Route::get('/clients/register', [ClientController::class, 'create'])-> name('register');
     Route::post('/to-login', [AuthController::class, 'to_login'])-> name('to_login');
+
+    //Clients
+    Route::get('/clients/register', [ClientController::class, 'create'])-> name('register');
+
+    //Account
     Route::post('/store', [AccountController::class, 'store'])->name('store');
 });
 
 Route::middleware("auth")->group(function(){
+    //Auth
     Route::get('/home', [AuthController::class, 'home'])-> name('home');
     Route::get('/to-logout', [AuthController::class, 'to_logout'])-> name('to_logout');
+
+    //Clients
+    Route::get('/clients/edit', [ClientController::class, 'edit'])-> name('client_edit');
+
+    //Clients pero temporalmente:: Pasarlo al controlador Compras
+    Route::get('/clients/my-purchases', [ClientController::class, 'my_purchases'])-> name('client_purchases');
+    Route::get('/clients/my-bills', [ClientController::class, 'my_bills'])-> name('client_bills');
+    
 });
 
 
