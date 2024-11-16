@@ -1,5 +1,5 @@
 <x-app-layout>
-    <div class="flex justify-center mt-12">
+    <div class="flex justify-center my-12">
         <div class="bg-cm-purple-1 shadow-lg shadow-cm-gray-8/50 border-2 border-cm-purple-2 p-10 max-w-sm rounded-lg">
             <h1 class="text-center text-2xl font-bold text-cm-blue-6 mb-6">Belikekis Components</h1>
             <img class="w-36 h-auto mx-auto mb-8" src="{{ asset('images/logo.png') }}" alt="Logo de la aplicación">
