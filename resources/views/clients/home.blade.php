@@ -98,6 +98,7 @@
         <!-- Contenedor Principal (Derecha) -->
         <div class="main-content flex-1 p-4 ml-8">
             <div class="grid grid-cols-5 gap-4">
+
                 <!-- Marcas destacadas -->
                 <div class="col-span-1 mt-4">       
                     <div class="bg-cm-gray-2 text-white p-4 rounded-lg w-full md:w-100 shadow-lg border-2 border-cm-gray-6">
@@ -105,35 +106,35 @@
                         <div class="grid grid-cols-2 gap-y-2 gap-x-4">
                             <!-- Botón con imagen -->
                             <button class="flex items-center justify-center bg-cm-gray-3 rounded-lg hover:bg-cm-purple-2 transition w-full h-12">
-                                <img src="{{ asset('images/nvidia_logo.png') }}" alt="logo de nvidia" class="w-full h-full object-contain">
+                                <img src="{{ asset('images/brands/nvidia-logo.png') }}" alt="logo de nvidia" class="w-full h-full object-contain">
                             </button>
                             
                             <button class="flex items-center justify-center bg-cm-gray-3 rounded-lg hover:bg-cm-purple-2 transition w-full h-12">
-                                <img src="{{ asset('images/amd-logo.png') }}" alt="logo de amd" class="w-full h-full object-contain">
+                                <img src="{{ asset('images/brands/amd-logo.png') }}" alt="logo de amd" class="w-full h-full object-contain">
                             </button>
                             
                             <button class="flex items-center justify-center bg-cm-gray-3 rounded-lg hover:bg-cm-purple-2 transition w-full h-12">
-                                <img src="{{ asset('images/intel-logo.png') }}" alt="logo de intel" class="w-full h-full object-contain">
+                                <img src="{{ asset('images/brands/intel-logo.png') }}" alt="logo de intel" class="w-full h-full object-contain">
                             </button>
                             
                             <button class="flex items-center justify-center bg-cm-gray-3 rounded-lg hover:bg-cm-purple-2 transition w-full h-12">
-                                <img src="{{ asset('images/msi-logo.png') }}" alt="logo de msi" class="w-full h-full object-contain">
+                                <img src="{{ asset('images/brands/msi-logo.png') }}" alt="logo de msi" class="w-full h-full object-contain p-1">
                             </button>
                             
                             <button class="flex items-center justify-center bg-cm-gray-3 rounded-lg hover:bg-cm-purple-2 transition w-full h-12">
-                                <img src="{{ asset('images/asus-logo.png') }}" alt="logo de asus" class="w-full h-full object-contain">
+                                <img src="{{ asset('images/brands/asus-logo.png') }}" alt="logo de asus" class="w-full h-full object-contain">
                             </button>
                             
                             <button class="flex items-center justify-center bg-cm-gray-3 rounded-lg hover:bg-cm-purple-2 transition w-full h-12">
-                                <img src="{{ asset('images/Corsair-logo.png') }}" alt="logo de corsair" class="w-full h-full object-contain">
+                                <img src="{{ asset('images/brands/corsair-logo.png') }}" alt="logo de corsair" class="w-full h-full object-contain">
                             </button>
                             
                             <button class="flex items-center justify-center bg-cm-gray-3 rounded-lg hover:bg-cm-purple-2 transition w-full h-12">
-                                <img src="{{ asset('images/aorus-logo.png') }}" alt="logo de aorus" class="w-full h-full object-contain">
+                                <img src="{{ asset('images/brands/aorus-logo.png') }}" alt="logo de aorus" class="w-full h-full object-contain p-1">
                             </button>
                             
                             <button class="flex items-center justify-center bg-cm-gray-3 rounded-lg hover:bg-cm-purple-2 transition w-full h-12">
-                                <img src="{{ asset('images/xpg-logo.png') }}" alt="logo de xpg" class="w-full h-full object-contain">
+                                <img src="{{ asset('images/brands/xpg-logo.png') }}" alt="logo de xpg" class="w-full h-full object-contain">
                             </button>                            
 
                         </div>
@@ -141,20 +142,20 @@
 
 
                 </div>
+
                 <!-- Carrusel -->
                 <div id="carousel" class="col-span-3 mt-4 overflow-hidden shadow-[0_0_15px_5px_rgba(107,14,221,0.5)] h-72">
-                    <img src="{{ asset('images/Banner.png') }}" class="w-full h-full object-cover" alt="Banner">
-                    <img src="{{ asset('images/Banner-2.png') }}" class="w-full h-full object-cover hidden" alt="Banner">
-                    <img src="{{ asset('images/Banner-3.png') }}" class="w-full h-full hidden" alt="Banner">
-                    <img src="{{ asset('images/Banner-4.png') }}" class="w-full h-full hidden" alt="Banner">
-                    <img src="{{ asset('images/Banner-5.jpg') }}" class="w-full h-full hidden" alt="Banner">
+                    <img src="{{ asset('images/banner/Banner.png') }}" class="w-full h-full object-cover" alt="Banner">
+                    <img src="{{ asset('images/banner/Banner-2.png') }}" class="w-full h-full object-cover hidden" alt="Banner">
+                    <img src="{{ asset('images/banner/Banner-3.png') }}" class="w-full h-full hidden" alt="Banner">
+                    <img src="{{ asset('images/banner/Banner-4.png') }}" class="w-full h-full hidden" alt="Banner">
+                    <img src="{{ asset('images/banner/Banner-5.jpg') }}" class="w-full h-full hidden" alt="Banner">
                 </div>
-                
-    
+
                 <!-- Métodos de pago -->
                 <div class="col-span-1 mt-4">
                     <div class="bg-cm-gray-2 text-white p-4 rounded-lg w-full md:w-100 shadow-lg border-2 border-cm-gray-6">
-                        <span class="text-base mb-4 block font-extrabold text-cm-gray-5 text-center">DESCUENTOS</span>
+                        <span class="text-base mb-4 block font-extrabold text-cm-gray-5 text-center">MEJORES DESCUENTOS</span>
                         <div class="grid grid-cols-2 gap-y-2 gap-x-4">
                             <!-- Botón con imagen -->
                             <button class="flex items-center justify-center bg-cm-gray-3 rounded-lg transition w-full h-12 overflow-hidden">
@@ -194,8 +195,8 @@
 
 
                 </div>
-
             </div>
+
             <!-- Productos -->
             <div class="mt-8 border-2 border-cm-gray-6 rounded-2xl">
                 <!-- Productos destacados -->
@@ -203,20 +204,17 @@
                     <div class="col-span-5">
                         <span class="font-black text-2xl text-cm-purple-2">Productos destacados</span>
                     </div>
-                    <style>
-
-                    </style>
                     <!-- Producto 1  -->
                     <div class="flex flex-col min-w-36 border-2 rounded-xl border-cm-gray-8 relative group-product">
                         <div class="divide-y-2 divide-cm-gray-8">
                             <div class="flex justify-center p-1 gap-2">
-                                <img class="w-5 h-auto" src="Images/etiqueta-new.png" alt="">
-                                <img class="w-5 h-auto" src="Images/etiqueta-desc.png" alt="">
-                                <img class="w-5 h-auto" src="Images/etiqueta-exclusive.png" alt="">
-                                <img class="w-5 h-auto" src="Images/etiqueta-envio.png" alt="">
+                                <img class="w-5 h-auto" src="{{ asset('images/labels/etiqueta-new.png') }}" alt="">
+                                <img class="w-5 h-auto" src="{{ asset('images/labels/etiqueta-desc.png') }}" alt="">
+                                <img class="w-5 h-auto" src="{{ asset('images/labels/etiqueta-exclusive.png') }}" alt="">
+                                <img class="w-5 h-auto" src="{{ asset('images/labels/etiqueta-envio.png') }}" alt="">
                             </div>
                             <div class="flex w-full justify-center bg-white">
-                                <img class="w-auto h-28 object-contain" src="Images/procesador-prueba.png" alt="producto de prueba">
+                                <img class="w-auto h-28 object-contain" src="{{ asset('images/temp/procesador-prueba.png') }}" alt="producto de prueba">
                             </div>
                             <div class="text-cm-gray-10 leading-4">
                                 <p class="line-clamp-3">Procesador Intel Core Ultra 7 265K / 20 Nucleos (8P+12E) / 3.9 GHz / LGA1851 / Intel Graphics / 125w / BX80768265K</p>
@@ -240,13 +238,13 @@
                     <div class="flex flex-col min-w-36 border-2 rounded-xl border-cm-gray-8 relative group-product">
                         <div class="divide-y-2 divide-cm-gray-8">
                             <div class="flex justify-center p-1 gap-2">
-                                <img class="w-5 h-auto" src="Images/etiqueta-new.png" alt="">
-                                <img class="w-5 h-auto" src="Images/etiqueta-desc.png" alt="">
-                                <img class="w-5 h-auto" src="Images/etiqueta-exclusive.png" alt="">
-                                <img class="w-5 h-auto" src="Images/etiqueta-envio.png" alt="">
+                                <img class="w-5 h-auto" src="{{ asset('images/labels/etiqueta-new.png') }}" alt="">
+                                <img class="w-5 h-auto" src="{{ asset('images/labels/etiqueta-desc.png') }}" alt="">
+                                <img class="w-5 h-auto" src="{{ asset('images/labels/etiqueta-exclusive.png') }}" alt="">
+                                <img class="w-5 h-auto" src="{{ asset('images/labels/etiqueta-envio.png') }}" alt="">
                             </div>
                             <div class="flex w-full justify-center bg-white">
-                                <img class="w-auto h-28 object-contain" src="Images/tarjeta-video-prueba.png" alt="producto de prueba">
+                                <img class="w-auto h-28 object-contain" src="{{ asset('images/temp/tarjeta-video-prueba.png') }}" alt="producto de prueba">
                             </div>
                             <div class="text-cm-gray-10 leading-4">
                                 <p class="line-clamp-3">Tarjeta de Video Asus ROG Strix GeForce RTX 4090 OC Edition / ROG-STRIX-RTX4090-O24G-GAMING</p>
@@ -273,13 +271,13 @@
                     <div class="flex flex-col min-w-36 border-2 rounded-xl border-cm-gray-8 relative group-product">
                         <div class="divide-y-2 divide-cm-gray-8">
                             <div class="flex justify-center p-1 gap-2">
-                                <img class="w-5 h-auto" src="Images/etiqueta-new.png" alt="">
-                                <img class="w-5 h-auto" src="Images/etiqueta-desc.png" alt="">
-                                <img class="w-5 h-auto" src="Images/etiqueta-exclusive.png" alt="">
-                                <img class="w-5 h-auto" src="Images/etiqueta-envio.png" alt="">
+                                <img class="w-5 h-auto" src="{{ asset('images/labels/etiqueta-new.png') }}" alt="">
+                                <img class="w-5 h-auto" src="{{ asset('images/labels/etiqueta-desc.png') }}" alt="">
+                                <img class="w-5 h-auto" src="{{ asset('images/labels/etiqueta-exclusive.png') }}" alt="">
+                                <img class="w-5 h-auto" src="{{ asset('images/labels/etiqueta-envio.png') }}" alt="">
                             </div>
                             <div class="flex w-full justify-center bg-white">
-                                <img class="w-auto h-28 object-contain" src="Images/procesador-prueba.png" alt="producto de prueba">
+                                <img class="w-auto h-28 object-contain" src="{{ asset('images/temp/procesador-prueba.png') }}" alt="producto de prueba">
                             </div>
                             <div class="text-cm-gray-10 leading-4">
                                 <p class="line-clamp-3">Procesador Intel Core Ultra 7 265K / 20 Nucleos (8P+12E) / 3.9 GHz / LGA1851 / Intel Graphics / 125w / BX80768265K</p>
@@ -303,13 +301,13 @@
                     <div class="flex flex-col min-w-36 border-2 rounded-xl border-cm-gray-8 relative group-product">
                         <div class="divide-y-2 divide-cm-gray-8">
                             <div class="flex justify-center p-1 gap-2">
-                                <img class="w-5 h-auto" src="Images/etiqueta-new.png" alt="">
-                                <img class="w-5 h-auto" src="Images/etiqueta-desc.png" alt="">
-                                <img class="w-5 h-auto" src="Images/etiqueta-exclusive.png" alt="">
-                                <img class="w-5 h-auto" src="Images/etiqueta-envio.png" alt="">
+                                <img class="w-5 h-auto" src="{{ asset('images/labels/etiqueta-new.png') }}" alt="">
+                                <img class="w-5 h-auto" src="{{ asset('images/labels/etiqueta-desc.png') }}" alt="">
+                                <img class="w-5 h-auto" src="{{ asset('images/labels/etiqueta-exclusive.png') }}" alt="">
+                                <img class="w-5 h-auto" src="{{ asset('images/labels/etiqueta-envio.png') }}" alt="">
                             </div>
                             <div class="flex w-full justify-center bg-white">
-                                <img class="w-auto h-28 object-contain" src="Images/tarjeta-video-prueba.png" alt="producto de prueba">
+                                <img class="w-auto h-28 object-contain" src="{{ asset('images/temp/tarjeta-video-prueba.png') }}" alt="producto de prueba">
                             </div>
                             <div class="text-cm-gray-10 leading-4">
                                 <p class="line-clamp-3">Tarjeta de Video Asus ROG Strix GeForce RTX 4090 OC Edition / ROG-STRIX-RTX4090-O24G-GAMING</p>
@@ -336,13 +334,13 @@
                     <div class="flex flex-col min-w-36 border-2 rounded-xl border-cm-gray-8 relative group-product">
                         <div class="divide-y-2 divide-cm-gray-8">
                             <div class="flex justify-center p-1 gap-2">
-                                <img class="w-5 h-auto" src="Images/etiqueta-new.png" alt="">
-                                <img class="w-5 h-auto" src="Images/etiqueta-desc.png" alt="">
-                                <img class="w-5 h-auto" src="Images/etiqueta-exclusive.png" alt="">
-                                <img class="w-5 h-auto" src="Images/etiqueta-envio.png" alt="">
+                                <img class="w-5 h-auto" src="{{ asset('images/labels/etiqueta-new.png') }}" alt="">
+                                <img class="w-5 h-auto" src="{{ asset('images/labels/etiqueta-desc.png') }}" alt="">
+                                <img class="w-5 h-auto" src="{{ asset('images/labels/etiqueta-exclusive.png') }}" alt="">
+                                <img class="w-5 h-auto" src="{{ asset('images/labels/etiqueta-envio.png') }}" alt="">
                             </div>
                             <div class="flex w-full justify-center bg-white">
-                                <img class="w-auto h-28 object-contain" src="Images/procesador-prueba.png" alt="producto de prueba">
+                                <img class="w-auto h-28 object-contain" src="{{ asset('images/temp/procesador-prueba.png') }}" alt="producto de prueba">
                             </div>
                             <div class="text-cm-gray-10 leading-4">
                                 <p class="line-clamp-3">Procesador Intel Core Ultra 7 265K / 20 Nucleos (8P+12E) / 3.9 GHz / LGA1851 / Intel Graphics / 125w / BX80768265K</p>
@@ -374,13 +372,13 @@
                     <div class="flex flex-col min-w-36 border-2 rounded-xl border-cm-gray-8 relative group-product">
                         <div class="divide-y-2 divide-cm-gray-8">
                             <div class="flex justify-center p-1 gap-2">
-                                <img class="w-5 h-auto" src="Images/etiqueta-new.png" alt="">
-                                <img class="w-5 h-auto" src="Images/etiqueta-desc.png" alt="">
-                                <img class="w-5 h-auto" src="Images/etiqueta-exclusive.png" alt="">
-                                <img class="w-5 h-auto" src="Images/etiqueta-envio.png" alt="">
+                                <img class="w-5 h-auto" src="{{ asset('images/labels/etiqueta-new.png') }}" alt="">
+                                <img class="w-5 h-auto" src="{{ asset('images/labels/etiqueta-desc.png') }}" alt="">
+                                <img class="w-5 h-auto" src="{{ asset('images/labels/etiqueta-exclusive.png') }}" alt="">
+                                <img class="w-5 h-auto" src="{{ asset('images/labels/etiqueta-envio.png') }}" alt="">
                             </div>
                             <div class="flex w-full justify-center bg-white">
-                                <img class="w-auto h-28 object-contain" src="Images/procesador-prueba.png" alt="producto de prueba">
+                                <img class="w-auto h-28 object-contain" src="{{ asset('images/temp/procesador-prueba.png') }}" alt="producto de prueba">
                             </div>
                             <div class="text-cm-gray-10 leading-4">
                                 <p class="line-clamp-3">Procesador Intel Core Ultra 7 265K / 20 Nucleos (8P+12E) / 3.9 GHz / LGA1851 / Intel Graphics / 125w / BX80768265K</p>
@@ -404,13 +402,13 @@
                     <div class="flex flex-col min-w-36 border-2 rounded-xl border-cm-gray-8 relative group-product">
                         <div class="divide-y-2 divide-cm-gray-8">
                             <div class="flex justify-center p-1 gap-2">
-                                <img class="w-5 h-auto" src="Images/etiqueta-new.png" alt="">
-                                <img class="w-5 h-auto" src="Images/etiqueta-desc.png" alt="">
-                                <img class="w-5 h-auto" src="Images/etiqueta-exclusive.png" alt="">
-                                <img class="w-5 h-auto" src="Images/etiqueta-envio.png" alt="">
+                                <img class="w-5 h-auto" src="{{ asset('images/labels/etiqueta-new.png') }}" alt="">
+                                <img class="w-5 h-auto" src="{{ asset('images/labels/etiqueta-desc.png') }}" alt="">
+                                <img class="w-5 h-auto" src="{{ asset('images/labels/etiqueta-exclusive.png') }}" alt="">
+                                <img class="w-5 h-auto" src="{{ asset('images/labels/etiqueta-envio.png') }}" alt="">
                             </div>
                             <div class="flex w-full justify-center bg-white">
-                                <img class="w-auto h-28 object-contain" src="Images/tarjeta-video-prueba.png" alt="producto de prueba">
+                                <img class="w-auto h-28 object-contain" src="{{ asset('images/temp/tarjeta-video-prueba.png') }}" alt="producto de prueba">
                             </div>
                             <div class="text-cm-gray-10 leading-4">
                                 <p class="line-clamp-3">Tarjeta de Video Asus ROG Strix GeForce RTX 4090 OC Edition / ROG-STRIX-RTX4090-O24G-GAMING</p>
@@ -437,13 +435,13 @@
                     <div class="flex flex-col min-w-36 border-2 rounded-xl border-cm-gray-8 relative group-product">
                         <div class="divide-y-2 divide-cm-gray-8">
                             <div class="flex justify-center p-1 gap-2">
-                                <img class="w-5 h-auto" src="Images/etiqueta-new.png" alt="">
-                                <img class="w-5 h-auto" src="Images/etiqueta-desc.png" alt="">
-                                <img class="w-5 h-auto" src="Images/etiqueta-exclusive.png" alt="">
-                                <img class="w-5 h-auto" src="Images/etiqueta-envio.png" alt="">
+                                <img class="w-5 h-auto" src="{{ asset('images/labels/etiqueta-new.png') }}" alt="">
+                                <img class="w-5 h-auto" src="{{ asset('images/labels/etiqueta-desc.png') }}" alt="">
+                                <img class="w-5 h-auto" src="{{ asset('images/labels/etiqueta-exclusive.png') }}" alt="">
+                                <img class="w-5 h-auto" src="{{ asset('images/labels/etiqueta-envio.png') }}" alt="">
                             </div>
                             <div class="flex w-full justify-center bg-white">
-                                <img class="w-auto h-28 object-contain" src="Images/procesador-prueba.png" alt="producto de prueba">
+                                <img class="w-auto h-28 object-contain" src="{{ asset('images/temp/procesador-prueba.png') }}" alt="producto de prueba">
                             </div>
                             <div class="text-cm-gray-10 leading-4">
                                 <p class="line-clamp-3">Procesador Intel Core Ultra 7 265K / 20 Nucleos (8P+12E) / 3.9 GHz / LGA1851 / Intel Graphics / 125w / BX80768265K</p>
@@ -467,13 +465,13 @@
                     <div class="flex flex-col min-w-36 border-2 rounded-xl border-cm-gray-8 relative group-product">
                         <div class="divide-y-2 divide-cm-gray-8">
                             <div class="flex justify-center p-1 gap-2">
-                                <img class="w-5 h-auto" src="Images/etiqueta-new.png" alt="">
-                                <img class="w-5 h-auto" src="Images/etiqueta-desc.png" alt="">
-                                <img class="w-5 h-auto" src="Images/etiqueta-exclusive.png" alt="">
-                                <img class="w-5 h-auto" src="Images/etiqueta-envio.png" alt="">
+                                <img class="w-5 h-auto" src="{{ asset('images/labels/etiqueta-new.png') }}" alt="">
+                                <img class="w-5 h-auto" src="{{ asset('images/labels/etiqueta-desc.png') }}" alt="">
+                                <img class="w-5 h-auto" src="{{ asset('images/labels/etiqueta-exclusive.png') }}" alt="">
+                                <img class="w-5 h-auto" src="{{ asset('images/labels/etiqueta-envio.png') }}" alt="">
                             </div>
                             <div class="flex w-full justify-center bg-white">
-                                <img class="w-auto h-28 object-contain" src="Images/tarjeta-video-prueba.png" alt="producto de prueba">
+                                <img class="w-auto h-28 object-contain" src="{{ asset('images/temp/tarjeta-video-prueba.png') }}" alt="producto de prueba">
                             </div>
                             <div class="text-cm-gray-10 leading-4">
                                 <p class="line-clamp-3">Tarjeta de Video Asus ROG Strix GeForce RTX 4090 OC Edition / ROG-STRIX-RTX4090-O24G-GAMING</p>
@@ -500,13 +498,13 @@
                     <div class="flex flex-col min-w-36 border-2 rounded-xl border-cm-gray-8 relative group-product">
                         <div class="divide-y-2 divide-cm-gray-8">
                             <div class="flex justify-center p-1 gap-2">
-                                <img class="w-5 h-auto" src="Images/etiqueta-new.png" alt="">
-                                <img class="w-5 h-auto" src="Images/etiqueta-desc.png" alt="">
-                                <img class="w-5 h-auto" src="Images/etiqueta-exclusive.png" alt="">
-                                <img class="w-5 h-auto" src="Images/etiqueta-envio.png" alt="">
+                                <img class="w-5 h-auto" src="{{ asset('images/labels/etiqueta-new.png') }}" alt="">
+                                <img class="w-5 h-auto" src="{{ asset('images/labels/etiqueta-desc.png') }}" alt="">
+                                <img class="w-5 h-auto" src="{{ asset('images/labels/etiqueta-exclusive.png') }}" alt="">
+                                <img class="w-5 h-auto" src="{{ asset('images/labels/etiqueta-envio.png') }}" alt="">
                             </div>
                             <div class="flex w-full justify-center bg-white">
-                                <img class="w-auto h-28 object-contain" src="Images/procesador-prueba.png" alt="producto de prueba">
+                                <img class="w-auto h-28 object-contain" src="{{ asset('images/temp/procesador-prueba.png') }}" alt="producto de prueba">
                             </div>
                             <div class="text-cm-gray-10 leading-4">
                                 <p class="line-clamp-3">Procesador Intel Core Ultra 7 265K / 20 Nucleos (8P+12E) / 3.9 GHz / LGA1851 / Intel Graphics / 125w / BX80768265K</p>
@@ -538,13 +536,13 @@
                     <div class="flex flex-col min-w-36 border-2 rounded-xl border-cm-gray-8 relative group-product">
                         <div class="divide-y-2 divide-cm-gray-8">
                             <div class="flex justify-center p-1 gap-2">
-                                <img class="w-5 h-auto" src="Images/etiqueta-new.png" alt="">
-                                <img class="w-5 h-auto" src="Images/etiqueta-desc.png" alt="">
-                                <img class="w-5 h-auto" src="Images/etiqueta-exclusive.png" alt="">
-                                <img class="w-5 h-auto" src="Images/etiqueta-envio.png" alt="">
+                                <img class="w-5 h-auto" src="{{ asset('images/labels/etiqueta-new.png') }}" alt="">
+                                <img class="w-5 h-auto" src="{{ asset('images/labels/etiqueta-desc.png') }}" alt="">
+                                <img class="w-5 h-auto" src="{{ asset('images/labels/etiqueta-exclusive.png') }}" alt="">
+                                <img class="w-5 h-auto" src="{{ asset('images/labels/etiqueta-envio.png') }}" alt="">
                             </div>
                             <div class="flex w-full justify-center bg-white">
-                                <img class="w-auto h-28 object-contain" src="Images/procesador-prueba.png" alt="producto de prueba">
+                                <img class="w-auto h-28 object-contain" src="{{ asset('images/temp/procesador-prueba.png') }}" alt="producto de prueba">
                             </div>
                             <div class="text-cm-gray-10 leading-4">
                                 <p class="line-clamp-3">Procesador Intel Core Ultra 7 265K / 20 Nucleos (8P+12E) / 3.9 GHz / LGA1851 / Intel Graphics / 125w / BX80768265K</p>
@@ -568,13 +566,13 @@
                     <div class="flex flex-col min-w-36 border-2 rounded-xl border-cm-gray-8 relative group-product">
                         <div class="divide-y-2 divide-cm-gray-8">
                             <div class="flex justify-center p-1 gap-2">
-                                <img class="w-5 h-auto" src="Images/etiqueta-new.png" alt="">
-                                <img class="w-5 h-auto" src="Images/etiqueta-desc.png" alt="">
-                                <img class="w-5 h-auto" src="Images/etiqueta-exclusive.png" alt="">
-                                <img class="w-5 h-auto" src="Images/etiqueta-envio.png" alt="">
+                                <img class="w-5 h-auto" src="{{ asset('images/labels/etiqueta-new.png') }}" alt="">
+                                <img class="w-5 h-auto" src="{{ asset('images/labels/etiqueta-desc.png') }}" alt="">
+                                <img class="w-5 h-auto" src="{{ asset('images/labels/etiqueta-exclusive.png') }}" alt="">
+                                <img class="w-5 h-auto" src="{{ asset('images/labels/etiqueta-envio.png') }}" alt="">
                             </div>
                             <div class="flex w-full justify-center bg-white">
-                                <img class="w-auto h-28 object-contain" src="Images/tarjeta-video-prueba.png" alt="producto de prueba">
+                                <img class="w-auto h-28 object-contain" src="{{ asset('images/temp/tarjeta-video-prueba.png') }}" alt="producto de prueba">
                             </div>
                             <div class="text-cm-gray-10 leading-4">
                                 <p class="line-clamp-3">Tarjeta de Video Asus ROG Strix GeForce RTX 4090 OC Edition / ROG-STRIX-RTX4090-O24G-GAMING</p>
@@ -601,13 +599,13 @@
                     <div class="flex flex-col min-w-36 border-2 rounded-xl border-cm-gray-8 relative group-product">
                         <div class="divide-y-2 divide-cm-gray-8">
                             <div class="flex justify-center p-1 gap-2">
-                                <img class="w-5 h-auto" src="Images/etiqueta-new.png" alt="">
-                                <img class="w-5 h-auto" src="Images/etiqueta-desc.png" alt="">
-                                <img class="w-5 h-auto" src="Images/etiqueta-exclusive.png" alt="">
-                                <img class="w-5 h-auto" src="Images/etiqueta-envio.png" alt="">
+                                <img class="w-5 h-auto" src="{{ asset('images/labels/etiqueta-new.png') }}" alt="">
+                                <img class="w-5 h-auto" src="{{ asset('images/labels/etiqueta-desc.png') }}" alt="">
+                                <img class="w-5 h-auto" src="{{ asset('images/labels/etiqueta-exclusive.png') }}" alt="">
+                                <img class="w-5 h-auto" src="{{ asset('images/labels/etiqueta-envio.png') }}" alt="">
                             </div>
                             <div class="flex w-full justify-center bg-white">
-                                <img class="w-auto h-28 object-contain" src="Images/procesador-prueba.png" alt="producto de prueba">
+                                <img class="w-auto h-28 object-contain" src="{{ asset('images/temp/procesador-prueba.png') }}" alt="producto de prueba">
                             </div>
                             <div class="text-cm-gray-10 leading-4">
                                 <p class="line-clamp-3">Procesador Intel Core Ultra 7 265K / 20 Nucleos (8P+12E) / 3.9 GHz / LGA1851 / Intel Graphics / 125w / BX80768265K</p>
@@ -631,13 +629,13 @@
                     <div class="flex flex-col min-w-36 border-2 rounded-xl border-cm-gray-8 relative group-product">
                         <div class="divide-y-2 divide-cm-gray-8">
                             <div class="flex justify-center p-1 gap-2">
-                                <img class="w-5 h-auto" src="Images/etiqueta-new.png" alt="">
-                                <img class="w-5 h-auto" src="Images/etiqueta-desc.png" alt="">
-                                <img class="w-5 h-auto" src="Images/etiqueta-exclusive.png" alt="">
-                                <img class="w-5 h-auto" src="Images/etiqueta-envio.png" alt="">
+                                <img class="w-5 h-auto" src="{{ asset('images/labels/etiqueta-new.png') }}" alt="">
+                                <img class="w-5 h-auto" src="{{ asset('images/labels/etiqueta-desc.png') }}" alt="">
+                                <img class="w-5 h-auto" src="{{ asset('images/labels/etiqueta-exclusive.png') }}" alt="">
+                                <img class="w-5 h-auto" src="{{ asset('images/labels/etiqueta-envio.png') }}" alt="">
                             </div>
                             <div class="flex w-full justify-center bg-white">
-                                <img class="w-auto h-28 object-contain" src="Images/tarjeta-video-prueba.png" alt="producto de prueba">
+                                <img class="w-auto h-28 object-contain" src="{{ asset('images/temp/tarjeta-video-prueba.png') }}" alt="producto de prueba">
                             </div>
                             <div class="text-cm-gray-10 leading-4">
                                 <p class="line-clamp-3">Tarjeta de Video Asus ROG Strix GeForce RTX 4090 OC Edition / ROG-STRIX-RTX4090-O24G-GAMING</p>
@@ -664,13 +662,13 @@
                     <div class="flex flex-col min-w-36 border-2 rounded-xl border-cm-gray-8 relative group-product">
                         <div class="divide-y-2 divide-cm-gray-8">
                             <div class="flex justify-center p-1 gap-2">
-                                <img class="w-5 h-auto" src="Images/etiqueta-new.png" alt="">
-                                <img class="w-5 h-auto" src="Images/etiqueta-desc.png" alt="">
-                                <img class="w-5 h-auto" src="Images/etiqueta-exclusive.png" alt="">
-                                <img class="w-5 h-auto" src="Images/etiqueta-envio.png" alt="">
+                                <img class="w-5 h-auto" src="{{ asset('images/labels/etiqueta-new.png') }}" alt="">
+                                <img class="w-5 h-auto" src="{{ asset('images/labels/etiqueta-desc.png') }}" alt="">
+                                <img class="w-5 h-auto" src="{{ asset('images/labels/etiqueta-exclusive.png') }}" alt="">
+                                <img class="w-5 h-auto" src="{{ asset('images/labels/etiqueta-envio.png') }}" alt="">
                             </div>
                             <div class="flex w-full justify-center bg-white">
-                                <img class="w-auto h-28 object-contain" src="Images/procesador-prueba.png" alt="producto de prueba">
+                                <img class="w-auto h-28 object-contain" src="{{ asset('images/temp/procesador-prueba.png') }}" alt="producto de prueba">
                             </div>
                             <div class="text-cm-gray-10 leading-4">
                                 <p class="line-clamp-3">Procesador Intel Core Ultra 7 265K / 20 Nucleos (8P+12E) / 3.9 GHz / LGA1851 / Intel Graphics / 125w / BX80768265K</p>
@@ -694,6 +692,7 @@
                 </div>
 
             </div>
+
         </div>
     </div>
 

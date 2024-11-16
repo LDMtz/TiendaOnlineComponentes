@@ -159,7 +159,7 @@
               <!-- Primer producto -->
               <tr class="border-b border-cm-gray-5 text-cm-gray-5">
                 <td class="py-2 flex items-center ">
-                  <img src="{{ asset('images/desc/TarjetaVideo.jpeg') }}" alt="Producto" class="w-16 h-16 mr-4 rounded">
+                  <img src="{{ asset('images/temp/TarjetaVideo.jpeg') }}" alt="Producto" class="w-16 h-16 mr-4 rounded">
                   <span>Tarjeta de Video NVIDIA GeForce RTX 4090</span>
                 </td>
                 <td class="py-2 text-center">1</td>
@@ -170,7 +170,7 @@
               <!-- Segundo producto -->
               <tr class="border-b border-cm-gray-5 text-cm-gray-5">
                 <td class="py-2 flex items-center">
-                  <img src="{{ asset('images/desc/Monitor.jpeg') }}" alt="Producto" class="w-16 h-16 mr-4 rounded">
+                  <img src="{{ asset('images/temp/Monitor.jpeg') }}" alt="Producto" class="w-16 h-16 mr-4 rounded">
                   <span>Monitor Gamer MSI MAG 275QF / 27” / 2560x1440...</span>
                 </td>
                 <td class="py-2 text-center">1</td>
@@ -181,7 +181,7 @@
               <!-- Tercer producto -->
               <tr class="border-b border-cm-gray-5 text-cm-gray-5">
                 <td class="py-2 flex items-center">
-                  <img src="{{ asset('images/desc/Mouse.jpeg') }}" alt="Producto" class="w-16 h-16 mr-4 rounded">
+                  <img src="{{ asset('images/temp/Mouse.jpeg') }}" alt="Producto" class="w-16 h-16 mr-4 rounded">
                   <span>Mouse Gamer Xzeal XZ-401 / RGB / 5 Botones / Alámbrico</span>
                 </td>
                 <td class="py-2 text-center">1</td>
@@ -192,7 +192,7 @@
               <!-- Cuarto producto -->
               <tr class="border-b border-cm-gray-5 text-cm-gray-5">
                 <td class="py-2 flex items-center">
-                  <img src="{{ asset('images/desc/Procesador.jpeg') }}" alt="Producto" class="w-16 h-16 mr-4 rounded">
+                  <img src="{{ asset('images/temp/Procesador.jpeg') }}" alt="Producto" class="w-16 h-16 mr-4 rounded">
                   <span>Procesador AMD RYZEN 7 8700F / 4.1 GHz / Octa Core / AM5</span>
                 </td>
                 <td class="py-2 text-center">1</td>
@@ -203,7 +203,7 @@
                 <!-- Quinto producto -->
                 <tr class="text-cm-gray-5">
                 <td class="py-2 flex items-center ">
-                  <img src="{{ asset('images/desc/TarjetaMadre.jpeg') }}" alt="Producto" class="w-16 h-16 mr-4 rounded">
+                  <img src="{{ asset('images/temp/TarjetaMadre.jpeg') }}" alt="Producto" class="w-16 h-16 mr-4 rounded">
                   <span>Tarjeta de Video NVIDIA GeForce RTX 4090</span>
                 </td>
                 <td class="py-2 text-center">1</td>

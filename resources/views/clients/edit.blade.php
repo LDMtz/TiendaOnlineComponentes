@@ -8,7 +8,7 @@
     
        <!-- Imagen de perfil -->
     <div class="flex justify-center mb-20 relative">
-      <img src="{{ asset('images/desc/a.jpg') }}" alt="" class="w-44 h-44 rounded-full border-2 border-white">
+      <img src="{{ asset('images/temp/a.jpg') }}" alt="" class="w-44 h-44 rounded-full border-2 border-white">
       <!-- Ícono de edición sobre la imagen -->
       <button class="absolute bottom-0 w-11 h-11 transform translate-y-1/2 flex items-center justify-center bg-cm-gray-3 rounded-full border-4 border-cm-gray-2">
         <i class="fa-regular fa-pen-to-square text-cm-gray-12 text-lg"></i>
