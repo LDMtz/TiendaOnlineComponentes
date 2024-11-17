@@ -19,13 +19,11 @@ class AuthController extends Controller
     }
 
     public function home(){
-        /*
         if (Auth::user()->role_id == 4) {
-            return view('employee.home');
-        } else {
             return view('clients.home');
-        }*/
-        return view('clients.home');
+        } else {
+            return view('employees.home');
+        }
     }
 
     public function to_logout(){
@@ -40,14 +38,9 @@ class AuthController extends Controller
             'password' => $request->password,
         ];
         
-        //if (Auth::guard('custom_guard')->attempt($credentials)) {
         if(Auth::attempt($credentials)){
             $request->session()->regenerate();
-            //dd(Auth::user());
-            //dd(Auth::check()); 
-            //dd(Auth::user()); 
-            //session()->put('user_id', Auth::id());
-            //dd(session()->all());
+
             return redirect()->route('home');
         }else{
             return back()->withErrors(['login' => 'Credenciales incorrectas']);

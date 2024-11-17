@@ -37,6 +37,9 @@ Route::middleware("auth")->group(function(){
     //Clients pero temporalmente:: Pasarlo al controlador Compras
     Route::get('/clients/my-purchases', [ClientController::class, 'my_purchases'])-> name('client_purchases');
     Route::get('/clients/my-bills', [ClientController::class, 'my_bills'])-> name('client_bills');
+
+    //Employees
+    //Route::get('/clients/edit', [ClientController::class, 'edit'])-> name('client_edit');
     
 });
 

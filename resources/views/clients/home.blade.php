@@ -604,4 +604,8 @@
         </div>
     </div>
 
+@push('scripts')
+    @vite('resources/js/home-clients.js')
+@endpush
+
 </x-app-layout>
