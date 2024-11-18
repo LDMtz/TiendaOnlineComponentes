@@ -5,14 +5,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\CategoryController;
-//Puedes acceder sin estar logueado
-/*
-Route::middleware([GuestMiddleware::class])->group(function(){
-
-});*/
-Route::middleware("guest")->group(function(){
-
-});
 
 Route::middleware("guest")->group(function(){
     //Auth
@@ -43,7 +35,7 @@ Route::middleware("auth")->group(function(){
     //Route::get('/clients/edit', [ClientController::class, 'edit'])-> name('client_edit');
 
     //Categories
-    Route::get('/categories/index', [CategoryController::class, 'index'])-> name('category_index');
+    Route::get('/categories', [CategoryController::class, 'index'])-> name('category_index');
     
 });
 
