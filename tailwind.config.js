@@ -65,7 +65,7 @@ export default {
             'cm-yellow-3': '#FFB52C',
             'cm-yellow-4': '#72510B',
             'cm-yellow-5': '#FFB52C',
-  
+            
   
               },
             fontFamily: {
