@@ -1,34 +1,106 @@
 <x-app-layout>
-<!-- Contenedor principal -->
-<div class="flex flex-col w-full lg:ml-6 space-y-4">
-            <!-- Fila superior -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <!-- Tarjeta de Bienvenida -->
-                <div class="bg-white shadow rounded-lg p-4">
-                    <div class="flex justify-between items-center">
-                        <div>
-                            <p class="text-gray-600 font-bold">Welcome Jonathan</p>
-                            <p class="text-gray-500 text-sm mt-1">Number of Reports</p>
-                        </div>
-                        <p class="text-4xl font-bold text-blue-600">102</p>
-                    </div>
-                </div>
+    <!-- Sidebar -->
+<div class="flex mx-8">
+        <div class="">
+            <x-sidebar-employee/>
+        </div>
+        <div class="flex-1 p-4 ml-8 my-8">
 
-                <!-- Tarjeta de Activos -->
-                <div class="bg-white shadow rounded-lg p-4">
-                    <div class="flex justify-between items-center">
-                        <div>
-                            <p class="text-gray-600 font-bold">Active</p>
-                            <p class="text-gray-500 text-sm mt-1">Leads/Contacts</p>
-                        </div>
-                        <p class="text-4xl font-bold text-blue-600">325</p>
+  <!-- Script para Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+    <!-- Contenedor principal -->
+    <div class="flex flex-col w-full lg:ml-6 space-y-4">
+        <!-- Fila superior -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <!-- Tarjeta de Bienvenida -->
+            <div class="bg-white shadow rounded-lg p-4">
+                <div class="flex justify-between items-center">
+                    <div>
+                        <p class="text-gray-600 font-bold">Welcome Jonathan</p>
+                        <p class="text-gray-500 text-sm mt-1">Number of Reports</p>
                     </div>
+                    <p class="text-4xl font-bold text-blue-600">102</p>
                 </div>
             </div>
 
+            <!-- Tarjeta de Activos -->
+            <div class="bg-white shadow rounded-lg p-4">
+                <div class="flex justify-between items-center">
+                    <div>
+                        <p class="text-gray-600 font-bold">Active</p>
+                        <p class="text-gray-500 text-sm mt-1">Leads/Contacts</p>
+                    </div>
+                    <p class="text-4xl font-bold text-blue-600">325</p>
+                </div>
+            </div>
+        </div>
 
+        <!-- Fila inferior -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <!-- Tarjeta Total Leads -->
+            <div class="bg-white shadow rounded-lg p-4">
+                <div class="flex justify-between items-center">
+                    <div>
+                        <p class="text-blue-600 text-xl font-bold">66.13K</p>
+                        <p class="text-gray-500 text-sm">Total Leads</p>
+                    </div>
+                    <span class="text-blue-600 text-3xl">📎</span>
+                </div>
+                <div class="flex justify-between items-center mt-4">
+                    <p class="text-blue-600 text-sm">% change</p>
+                    <div class="bg-blue-600 w-10 h-4"></div>
+                </div>
+            </div>
 
-<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+            <!-- Tarjeta Total Pending -->
+            <div class="bg-white shadow rounded-lg p-4">
+                <div class="flex justify-between items-center">
+                    <div>
+                        <p class="text-red-500 text-xl font-bold">3.490K</p>
+                        <p class="text-gray-500 text-sm">Total Pending</p>
+                    </div>
+                    <span class="text-red-500 text-3xl">⭕</span>
+                </div>
+                <div class="flex justify-between items-center mt-4">
+                    <p class="text-red-500 text-sm">% change</p>
+                    <div class="bg-red-500 w-10 h-4"></div>
+                </div>
+            </div>
+
+            <!-- Tarjeta Case Closed -->
+            <div class="bg-white shadow rounded-lg p-4">
+                <div class="flex justify-between items-center">
+                    <div>
+                        <p class="text-green-500 text-xl font-bold">8.372K</p>
+                        <p class="text-gray-500 text-sm">Case Closed</p>
+                    </div>
+                    <span class="text-green-500 text-3xl">🔒</span>
+                </div>
+                <div class="flex justify-between items-center mt-4">
+                    <p class="text-green-500 text-sm">% change</p>
+                    <div class="bg-green-500 w-10 h-4"></div>
+                </div>
+            </div>
+
+            <!-- Tarjeta Task Completed -->
+            <div class="bg-white shadow rounded-lg p-4">
+                <div class="flex justify-between items-center">
+                    <div>
+                        <p class="text-orange-500 text-xl font-bold">5.355K</p>
+                        <p class="text-gray-500 text-sm">Task Completed</p>
+                    </div>
+                    <span class="text-orange-500 text-3xl">📄</span>
+                </div>
+                <div class="flex justify-between items-center mt-4">
+                    <p class="text-orange-500 text-sm">% change</p>
+                    <div class="bg-orange-500 w-10 h-4"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
     <!-- Tabla Active Orders -->
     <div class="bg-white shadow rounded-lg p-4 overflow-auto">
         <h2 class="text-lg font-bold text-gray-600 mb-4">Active Orders</h2>
@@ -64,6 +136,7 @@
         <canvas id="analyticsChart" class="w-full h-64"></canvas>
     </div>
 </div>
+
 
 <!-- Script para el gráfico -->
 <script>
