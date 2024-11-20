@@ -11,17 +11,17 @@ class SupplierController extends Controller
         return view('suppliers.index');
     }
 
-    public function show($id)
+    public function show(string $id)
     {
         return view('suppliers.index');
     }
 
-    public function edit($id)
+    public function edit(string $id)
     {
         return view('suppliers.index');
     }
 
-    public function destroy($id)
+    public function destroy(string $id)
     {
         return view('suppliers.index');
     }
