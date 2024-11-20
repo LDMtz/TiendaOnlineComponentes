@@ -6,6 +6,7 @@ use App\Http\Controllers\ClientController;
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\SupplierController;
+use App\Http\Controllers\TagController;
 
 Route::middleware("guest")->group(function(){
     //Auth
@@ -36,31 +37,22 @@ Route::middleware("auth")->group(function(){
     Route::get('/categories', [CategoryController::class, 'index'])-> name('category_index');
     Route::get('/categories/show/{id}', [CategoryController::class, 'show'])->name('category_show');
     Route::get('/categories/edit/{id}', [CategoryController::class, 'edit'])-> name('category_edit');
-    Route::get('/categories/destroy/{id}', [CategoryController::class, 'destroy'])-> name('category_destroy');
+    Route::delete('/categories/destroy/{id}', [CategoryController::class, 'destroy'])-> name('category_destroy');
     
     //Suppliers
     Route::get('/suppliers', [SupplierController::class, 'index'])-> name('supplier_index');
     Route::get('/supplier/show/{id}', [SupplierController::class, 'show'])->name('supplier_show');
     Route::get('/suppliers/edit/{id}', [SupplierController::class, 'edit'])-> name('supplier_edit');
-    Route::get('/suppliers/destroy/{id}', [SupplierController::class, 'destroy'])-> name('supplier_destroy');
-});
+    Route::delete('/suppliers/destroy/{id}', [SupplierController::class, 'destroy'])-> name('supplier_destroy');
 
+    //Suppliers
+    Route::get('/tags', [TagController::class, 'index'])-> name('tag_index');
+    Route::get('/tags/show/{id}', [TagController::class, 'show'])->name('tag_show');
+    Route::get('/tags/edit/{id}', [TagController::class, 'edit'])-> name('tag_edit');
+    Route::delete('/tags/destroy/{id}', [TagController::class, 'destroy'])-> name('tag_destroy');
+});
 
 /*
-//Necesitar validarte para acceder a estas rutas
-Route::middleware([AuthAccountMiddleware::class])->group(function(){
-
-});
-
-*/
-
-/*
-Route::get('/', function () {
-    return view('clients.home');
-});
-
-
-
 //Ruta para clients
 Route::get('/clients', [ClientController::class, 'index'])->name('clients.index'); // Mostrar todos los clientes
 Route::get('/clients/create', [ClientController::class, 'create'])->name('clients.create'); // Mostrar el formulario para crear un nuevo cliente

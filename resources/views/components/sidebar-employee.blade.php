@@ -9,7 +9,7 @@
         <x-sidebar-item-emp route="home" icon="fa-solid fa-box">PRODUCTOS</x-sidebar-item-emp>
         <x-sidebar-item-emp route="category_index" icon="fa-solid fa-tags">CATEGORIAS</x-sidebar-item-emp>
         <x-sidebar-item-emp route="supplier_index" icon="fa-solid fa-truck">PROVEEDORES</x-sidebar-item-emp>
-        <x-sidebar-item-emp route="home" icon="fa-solid fa-bookmark">ETIQUETAS</x-sidebar-item-emp>
+        <x-sidebar-item-emp route="tag_index" icon="fa-solid fa-bookmark">ETIQUETAS</x-sidebar-item-emp>
         <x-sidebar-item-emp route="home" icon="fa-solid fa-warehouse">INVENTARIO</x-sidebar-item-emp>
         <x-sidebar-item-emp route="home" icon="fa-solid fa-ticket-simple">DESCUENTO</x-sidebar-item-emp>
         <x-sidebar-item-emp route="home" icon="fa-solid fa-shop">COMPRA</x-sidebar-item-emp>
