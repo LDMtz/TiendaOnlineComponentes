@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\SupplierController;
 
 Route::middleware("guest")->group(function(){
     //Auth
@@ -31,12 +32,14 @@ Route::middleware("auth")->group(function(){
     Route::get('/clients/my-purchases', [ClientController::class, 'my_purchases'])-> name('client_purchases');
     Route::get('/clients/my-bills', [ClientController::class, 'my_bills'])-> name('client_bills');
 
-    //Employees
-    //Route::get('/clients/edit', [ClientController::class, 'edit'])-> name('client_edit');
-
     //Categories
     Route::get('/categories', [CategoryController::class, 'index'])-> name('category_index');
     
+    //Suppliers
+    Route::get('/suppliers', [SupplierController::class, 'index'])-> name('supplier_index');
+    Route::get('/supplier/show/{id}', [SupplierController::class, 'show'])->name('supplier_show');
+    Route::get('/suppliers/edit/{id}', [SupplierController::class, 'edit'])-> name('supplier_edit');
+    Route::get('/suppliers/destroy/{id}', [SupplierController::class, 'destroy'])-> name('supplier_destroy');
 });
 
 

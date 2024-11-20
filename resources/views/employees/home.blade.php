@@ -1,8 +1,6 @@
 <x-app-layout>
-
-
- <!-- Contenedor principal -->
- <div class="flex flex-col w-full lg:ml-6 space-y-4">
+<!-- Contenedor principal -->
+<div class="flex flex-col w-full lg:ml-6 space-y-4">
             <!-- Fila superior -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <!-- Tarjeta de Bienvenida -->
@@ -91,6 +89,5 @@
             }
         }
     });
-</script>  
-
+</script>
 </x-app-layout>

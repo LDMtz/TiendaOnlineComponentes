@@ -48,6 +48,8 @@ export default {
             /* Green*/
             'cm-green-1': '#23D74A',
             'cm-green-2': '#02410F',
+            'cm-green-3': '#0B9F2B',
+            'cm-green-4': '#6DFF8D',
 
             /* Blue*/
             'cm-blue-1': '#4AD4DE',
@@ -58,6 +60,8 @@ export default {
             'cm-blue-6': '#79AFFF',
             'cm-blue-7': '#31ACF9',
             'cm-blue-8': '#1812D5',
+            'cm-blue-9': '#417DFF',
+            'cm-blue-10': '#7883FF',
 
             /*Yellow*/
             'cm-yellow-1': '#774409',
