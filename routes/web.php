@@ -7,6 +7,7 @@ use App\Http\Controllers\AccountController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\SupplierController;
 use App\Http\Controllers\TagController;
+use App\Http\Controllers\ProductController;
 
 Route::middleware("guest")->group(function(){
     //Auth
@@ -50,6 +51,12 @@ Route::middleware("auth")->group(function(){
     Route::get('/tags/show/{id}', [TagController::class, 'show'])->name('tag_show');
     Route::get('/tags/edit/{id}', [TagController::class, 'edit'])-> name('tag_edit');
     Route::delete('/tags/destroy/{id}', [TagController::class, 'destroy'])-> name('tag_destroy');
+
+    //Products
+    Route::get('/products', [ProductController::class, 'index'])-> name('product_index');
+    Route::get('/products/show/{id}', [ProductController::class, 'show'])->name('product_show');
+    Route::get('/products/edit/{id}', [ProductController::class, 'edit'])-> name('product_edit');
+    Route::delete('/products/destroy/{id}', [ProductController::class, 'destroy'])-> name('product_destroy');
 });
 
 /*

@@ -11,12 +11,12 @@
                 <a href="{{route('home')}}" class="w-7 h-7 flex items-center justify-center rounded-full bg-cm-blue-10 p-1 hover:bg-blue-400">
                     <i class="fa-solid fa-arrow-left text-white text-lg"></i>
                 </a>
-                <h1 class="text-cm-blue-10 font-black text-3xl" >SECCIÓN ETIQUETAS</h1>
+                <h1 class="text-cm-blue-10 font-black text-3xl" >SECCIÓN PRODUCTOS</h1>
             </div>
 
             <!-- Banner tabla -->
             <div class="flex items-center bg-cm-gray-2 rounded-lg border-2 border-cm-gray-3 mt-7 p-3">
-                <p class="text-white font-bold text-lg">Lista de Etiquetas</p>
+                <p class="text-white font-bold text-lg">Lista de Productos</p>
                 <!-- Buttons -->
                 <div class="flex space-x-4 ml-auto">
                     <a href="#" class="bg-cm-blue-9 text-white py-1 px-3 rounded-lg hover:bg-sky-500 hover:text-sky-100">
@@ -105,7 +105,7 @@
                             <x-td-table type="normal" :content="$user['age']" />
                             <x-td-table type="normal" :content="$user['role']" />
                             <x-td-table type="normal" :content="$user['created_at']" />
-                            <x-td-table type="actions" :content="['section' => 'tag', 'id' => $user['id']]" />
+                            <x-td-table type="actions" :content="['section' => 'product', 'id' => $user['id']]" />
                         </tr>
                         @endforeach
                     </x-slot>

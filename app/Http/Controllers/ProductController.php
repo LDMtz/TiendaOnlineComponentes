@@ -4,14 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class TagController extends Controller
+class ProductController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view("tags.index");
+        return view("products.index");
     }
 
     /**
@@ -35,7 +35,7 @@ class TagController extends Controller
      */
     public function show(string $id)
     {
-        return view("tags.index");
+        return view("products.index");
     }
 
     /**
@@ -43,7 +43,7 @@ class TagController extends Controller
      */
     public function edit(string $id)
     {
-        return view("tags.index");
+        return view("products.index");
     }
 
     /**
@@ -59,6 +59,6 @@ class TagController extends Controller
      */
     public function destroy(string $id)
     {
-        //return view("tags.index");
+        //
     }
 }
