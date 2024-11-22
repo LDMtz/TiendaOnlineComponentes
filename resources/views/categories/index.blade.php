@@ -19,11 +19,11 @@
                 <p class="text-white font-bold text-lg">Lista de Categorias</p>
                 <!-- Buttons -->
                 <div class="flex space-x-4 ml-auto">
-                    <a href="#" class="bg-cm-blue-9 text-white py-1 px-3 rounded-lg hover:bg-sky-500 hover:text-sky-100">
+                    <a id="open-modal" href="#" class="bg-cm-blue-9 text-white py-1 px-3 rounded-lg hover:bg-sky-500 hover:text-sky-100">
                         <i class="fa-solid fa-magnifying-glass"></i>
                         <span class="font-semibold ml-1">BUSCAR</span>
                     </a>
-                    <a href="#" class="bg-cm-green-3 text-white py-1 px-3 rounded-lg hover:bg-green-500 hover:text-green-100">
+                    <a href="{{route('category_create')}}" class="bg-cm-green-3 text-white py-1 px-3 rounded-lg hover:bg-green-500 hover:text-green-100">
                         <i class="fa-solid fa-plus"></i>
                         <span class="font-semibold ml-1">AGREGAR</span>
                     </a>
@@ -112,3 +112,73 @@
     </div>
 
 </x-app-layout>
+
+<!-- Modal -->
+<div id="crud-modal" class="hidden">
+    <div class="flex fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-50 justify-center items-center">
+        <div class="bg-gray-700 rounded-lg shadow-lg w-full max-w-md">
+            <!-- Modal header -->
+            <div class="flex justify-between items-center border-b px-5 py-3">
+                <h3 class="text-sm font-semibold text-white">BUSCAR</h3>
+                <button id="close-modal" class="text-gray-500 hover:text-red-500">
+                    <i class="fa-solid fa-x text-sm"></i>
+                </button>
+            </div>
+    
+            <!-- Modal body -->
+            <form>
+                <div class="p-5">
+                    <!-- Contenedor del Select -->
+                    <div class="mb-4">
+                        <label for="filter" class="text-sm font-medium text-gray-200">Filtrar por:</label>
+                        <select id="filter" class="w-full mt-1 text-white border border-gray-300 bg-gray-600 rounded-lg p-1">
+                            <option>Selecciona una opción</option>
+                            <option>Nombre</option>
+                            <option>Estado</option>
+                        </select>
+                    </div>
+            
+                    <!-- Contenedor del Input -->
+                    <div class="mb-4">
+                        <label for="input-data" class="text-sm font-medium text-gray-200">Ingresa el dato:</label>
+                        <input id="input-data" type="text" class="w-full mt-1 text-white border border-gray-300 bg-gray-600 rounded-lg p-1 outline-none">
+                    </div>
+            
+                    <!-- Contenedor del Botón -->
+                    <div class="flex justify-center mt-4">
+                        <button type="submit" class="bg-blue-600 text-white px-3 py-1 rounded-lg hover:bg-blue-700">
+                            <i class="fa-solid fa-magnifying-glass text-sm"></i>
+                            <span class="font-semibold ml-1">Buscar</span>
+                        </button>
+                    </div>
+                </div>
+            </form>
+            
+        </div>
+    </div>
+</div>
+
+<script>
+    // Obtener los elementos
+const openModalBtn = document.getElementById('open-modal');
+const closeModalBtn = document.getElementById('close-modal');
+const modal = document.getElementById('crud-modal');
+
+// Abrir el modal
+openModalBtn.addEventListener('click', (e) => {
+    e.preventDefault(); // Prevenir el comportamiento por defecto del enlace
+    modal.classList.remove('hidden'); // Quitar la clase `hidden` para mostrar el modal
+});
+
+// Cerrar el modal
+closeModalBtn.addEventListener('click', () => {
+    modal.classList.add('hidden'); // Agregar la clase `hidden` para ocultar el modal
+});
+
+// Cerrar el modal al hacer clic fuera del contenido
+window.addEventListener('click', (e) => {
+    if (e.target === modal) { // Si el clic fue en el fondo del modal
+        modal.classList.add('hidden');
+    }
+}); 
+</script>

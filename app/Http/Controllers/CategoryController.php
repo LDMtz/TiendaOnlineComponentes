@@ -10,12 +10,16 @@ class CategoryController extends Controller
         return view("categories.index");
     }
 
+    public function create(){
+        return view("categories.create");
+    }
+
     public function show(string $id){
-        return view("categories.index");
+        return view("categories.show");
     }
 
     public function edit(string $id){
-        return view("categories.index");
+        return view("categories.edit");
     }
 
     public function destroy(string $id){

@@ -36,8 +36,9 @@ Route::middleware("auth")->group(function(){
 
     //Categories
     Route::get('/categories', [CategoryController::class, 'index'])-> name('category_index');
-    Route::get('/categories/show/{id}', [CategoryController::class, 'show'])->name('category_show');
+    Route::get('/categories/create', [CategoryController::class, 'create'])-> name('category_create');
     Route::get('/categories/edit/{id}', [CategoryController::class, 'edit'])-> name('category_edit');
+    Route::get('/categories/show/{id}', [CategoryController::class, 'show'])->name('category_show');
     Route::delete('/categories/destroy/{id}', [CategoryController::class, 'destroy'])-> name('category_destroy');
     
     //Suppliers
