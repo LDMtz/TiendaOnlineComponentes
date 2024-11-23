@@ -32,74 +32,26 @@
 
             <!-- Tabla -->
             <div class="bg-cm-gray-2 rounded-lg border-2 border-cm-gray-3 mt-6 p-4">
-                @php
-                $users = [
-                    [
-                        'id' => 1,
-                        'name' => 'Juan',
-                        'lastname' => 'Pérez',
-                        'state' => true,  // El estado es true, lo que podría significar "ACTIVO"
-                        'email' => 'juan.perez@example.com',  // Correo electrónico
-                        'age' => 30,  // Edad del usuario
-                        'role' => 'Admin',  // Rol del usuario
-                        'created_at' => '2023-06-01 12:00:00',  // Fecha de creación
-                    ],
-                    [
-                        'id' => 2,
-                        'name' => 'Ana',
-                        'lastname' => 'Gómez',
-                        'state' => false,  // El estado es false, lo que podría significar "INACTIVO"
-                        'email' => 'ana.gomez@example.com',  // Correo electrónico
-                        'age' => 28,  // Edad del usuario
-                        'role' => 'User',  // Rol del usuario
-                        'created_at' => '2022-03-15 09:30:00',  // Fecha de creación
-                    ],
-                    [
-                        'id' => 3,
-                        'name' => 'Carlos',
-                        'lastname' => 'Rodríguez',
-                        'state' => true,  // El estado es true, lo que podría significar "ACTIVO"
-                        'email' => 'carlos.rodriguez@example.com',  // Correo electrónico
-                        'age' => 35,  // Edad del usuario
-                        'role' => 'User',  // Rol del usuario
-                        'created_at' => '2021-12-10 14:45:00',  // Fecha de creación
-                    ],
-                    [
-                        'id' => 4,
-                        'name' => 'Lucía',
-                        'lastname' => 'Martínez',
-                        'state' => false,  // El estado es false, lo que podría significar "INACTIVO"
-                        'email' => 'lucia.martinez@example.com',  // Correo electrónico
-                        'age' => 27,  // Edad del usuario
-                        'role' => 'User',  // Rol del usuario
-                        'created_at' => '2020-08-20 16:00:00',  // Fecha de creación
-                    ]
-                ];
-                @endphp
                 <x-table>
                     <x-slot name="headTable">
                         <x-th-table>Id</x-th-table>
                         <x-th-table>Nombre</x-th-table>
-                        <x-th-table>Apellido</x-th-table>
+                        <x-th-table>Categoría padre</x-th-table>
                         <x-th-table>Estado</x-th-table>
-                        <x-th-table>Email</x-th-table>
-                        <x-th-table>Edad</x-th-table>
-                        <x-th-table>Rol</x-th-table>
-                        <x-th-table>Fecha</x-th-table>
+                        <x-th-table>Fecha de Creación</x-th-table>
+                        <x-th-table>Ultima Actualización</x-th-table>
                         <x-th-table>Acciones</x-th-table>
                     </x-slot>
                     <x-slot name="bodyTable">
-                        @foreach($users as $user)
+                        @foreach($categories as $category)
                         <tr>
-                            <x-td-table type="normal" :content="$user['id']" />
-                            <x-td-table type="normal" :content="$user['name']" />
-                            <x-td-table type="normal" :content="$user['lastname']" />
-                            <x-td-table type="state" :content="$user['state']" />
-                            <x-td-table type="normal" :content="$user['email']" />
-                            <x-td-table type="normal" :content="$user['age']" />
-                            <x-td-table type="normal" :content="$user['role']" />
-                            <x-td-table type="normal" :content="$user['created_at']" />
-                            <x-td-table type="actions" :content="['section' => 'category', 'id' => $user['id']]" />
+                            <x-td-table type="normal" :content="$category['id']" />
+                            <x-td-table type="normal" :content="$category['name']" />
+                            <x-td-table type="normal" :content="$category->parentCategory ? $category->parentCategory->name : 'Sin categoría padre'" />
+                            <x-td-table type="state" :content="$category['state']" />
+                            <x-td-table type="normal" :content="$category['created_at']" />
+                            <x-td-table type="normal" :content="$category['updated_at']" />
+                            <x-td-table type="actions" :content="['section' => 'category', 'id' => $category['id']]" />
                         </tr>
                         @endforeach
                     </x-slot>
@@ -114,13 +66,13 @@
 </x-app-layout>
 
 <!-- Modal -->
-<div id="crud-modal" class="hidden">
+<div id="search-modal" class="hidden">
     <div class="flex fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-50 justify-center items-center">
         <div class="bg-gray-700 rounded-lg shadow-lg w-full max-w-md">
             <!-- Modal header -->
             <div class="flex justify-between items-center border-b px-5 py-3">
                 <h3 class="text-sm font-semibold text-white">BUSCAR</h3>
-                <button id="close-modal" class="text-gray-500 hover:text-red-500">
+                <button id="close-modal-search" class="text-gray-500 hover:text-red-500">
                     <i class="fa-solid fa-x text-sm"></i>
                 </button>
             </div>
@@ -158,27 +110,110 @@
     </div>
 </div>
 
+<!-- Modal Success -->
+@if(session('success'))
+    <!-- Modal Success -->
+    <div id="successModal" class="">
+        <div tabindex="-1" aria-hidden="true" class="fixed inset-0 z-50 flex justify-center items-center bg-gray-900 bg-opacity-50">
+            <div class="relative p-4 w-full max-w-md h-auto rounded-lg shadow bg-gray-800">
+                <!-- Modal content -->
+                <div class="relative p-4 text-center">
+                    <!-- Botón de Cerrar -->
+                    <button id="close-modal-success" type="button" class="absolute top-2.5 right-2.5 text-gray-400 bg-transparent rounded-lg text-sm p-1.5 ml-auto inline-flex items-center hover:bg-gray-600 hover:text-white">
+                        <i class="fa-solid fa-x"></i>
+                    </button>
+                    <div class="w-12 h-12 rounded-full bg-green-900 p-2 flex items-center justify-center mx-auto mb-3.5">
+                        <i class="fa-solid fa-check text-green-400 text-xl"></i>
+                    </div>
+                    <p class="mb-4 text-lg font-semibold text-gray-900 dark:text-white">{{ session('success') }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+@endif
+
+
+<!-- Modal delete -->
+<div id="popup-modal" class="hidden">
+    <div tabindex="-1" class="fixed inset-0 flex justify-center items-center z-50 bg-black bg-opacity-50 ">
+        <div class="relative p-4 w-full max-w-md max-h-full">
+            <div class="relative rounded-lg shadow bg-gray-700">
+                <button id="close-confirmation-modal" onclick="closeModalDelete()" type="button" class="absolute top-2.5 right-2.5 text-gray-400 bg-transparent rounded-lg text-sm p-1.5 ml-auto inline-flex items-center hover:bg-gray-600 hover:text-white">
+                    <i class="fa-solid fa-x"></i>
+                </button>
+                <div class="p-4 text-center">
+                    <i class="fa-solid fa-circle-exclamation mx-auto mb-4 text-gray-200 text-4xl"></i>
+                    <h3 class="mb-5 text-lg font-normal text-gray-400">¿Estás seguro de que lo quieres eliminar?</h3>
+                    <button id="confirm-action-delete" type="button" class="text-white bg-red-600 hover:bg-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center">
+                        Si, estoy seguro
+                    </button>
+                    <button id="cancel-confirmation-delete" type="button" class="py-2.5 px-5 ms-3 text-sm font-medium rounded-lg border bg-gray-800 text-gray-400 border-gray-600 hover:text-white hover:bg-gray-400">
+                        No, cancelar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
 <script>
     // Obtener los elementos
 const openModalBtn = document.getElementById('open-modal');
-const closeModalBtn = document.getElementById('close-modal');
-const modal = document.getElementById('crud-modal');
+const closeModalSearchBtn = document.getElementById('close-modal-search');
+const closeModalSuccessBtn = document.getElementById('close-modal-success');
+//const closeModalDeleteBtn = document.getElementById('close-confirmation-modal');
+//const cancelConfirmationDeleteBtn = document.getElementById('cancel-confirmation-delete');
+//const confirmActionDeleteBtn = document.getElementById('confirm-action-delete');
+const modalSearch = document.getElementById('search-modal');
+const modalSuccess = document.getElementById('successModal');
+//const modalDelete = document.getElementById('popup-modal');
+
 
 // Abrir el modal
 openModalBtn.addEventListener('click', (e) => {
     e.preventDefault(); // Prevenir el comportamiento por defecto del enlace
-    modal.classList.remove('hidden'); // Quitar la clase `hidden` para mostrar el modal
+    modalSearch.classList.remove('hidden'); // Quitar la clase `hidden` para mostrar el modal
 });
 
 // Cerrar el modal
-closeModalBtn.addEventListener('click', () => {
-    modal.classList.add('hidden'); // Agregar la clase `hidden` para ocultar el modal
+closeModalSearchBtn.addEventListener('click', () => {
+    modalSearch.classList.add('hidden'); // Agregar la clase `hidden` para ocultar el modal
 });
 
 // Cerrar el modal al hacer clic fuera del contenido
 window.addEventListener('click', (e) => {
-    if (e.target === modal) { // Si el clic fue en el fondo del modal
-        modal.classList.add('hidden');
+    if (e.target === modalSearch) { // Si el clic fue en el fondo del modal
+        modalSearch.classList.add('hidden');
     }
 }); 
+
+
+/*_____________________________*/
+
+// Cerrar el modal
+closeModalSuccessBtn.addEventListener('click', () => {
+    modalSuccess.classList.add('hidden'); // Agregar la clase `hidden` para ocultar el modal
+});
+
+// Cerrar el modal al hacer clic fuera del contenido
+window.addEventListener('click', (e) => {
+    if (e.target === modalSuccess) { // Si el clic fue en el fondo del modal
+        modalSuccess.classList.add('hidden');
+    }
+}); 
+
+/*_____________________________*/
+/*
+function openConfirmationModal(event) {
+    // Muestra la modal
+    modalDelete.classList.remove('hidden');
+}
+
+function closeModalDelete() {
+    modalDelete.classList.add('hidden');
+}
+*/
+
 </script>

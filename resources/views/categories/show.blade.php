@@ -29,19 +29,19 @@
                             <!-- Input: Id categoría -->
                             <div class="bg-cm-gray-3 text-white rounded-md w-full px-4 pb-3 pt-2">
                                 <label class="text-base font-bold text-cm-gray-5">Id Categoría:</label>
-                                <input type="text" class="w-full p-0.5 outline-none bg-transparent border-2 rounded-md px-2 border-cm-gray-5 text-sm text-white" disabled>
+                                <input value="{{ $category->id }}" type="text" class="w-full p-0.5 outline-none bg-transparent border-2 rounded-md px-2 border-cm-gray-5 text-sm text-white" disabled>
                             </div>
 
                             <!-- Input: Nombre -->
                             <div class="bg-cm-gray-3 text-white rounded-md w-full px-4 pb-3 pt-2 mt-5">
                                 <label class="text-base font-bold text-cm-gray-5">Nombre:</label>
-                                <input type="text" class="w-full p-0.5 outline-none bg-transparent border-2 rounded-md px-2 border-cm-gray-5 text-sm text-white" disabled>
+                                <input value="{{ $category->name }}" type="text" class="w-full p-0.5 outline-none bg-transparent border-2 rounded-md px-2 border-cm-gray-5 text-sm text-white" disabled>
                             </div>
 
                             <!-- Input: Fecha de creacion -->
                             <div class="bg-cm-gray-3 text-white rounded-md w-full px-4 pb-3 pt-2 mt-5">
                                 <label class="text-base font-bold text-cm-gray-5">Fecha de creación:</label>
-                                <input type="text" class="w-full p-0.5 outline-none bg-transparent border-2 rounded-md px-2 border-cm-gray-5 text-sm text-white" disabled>
+                                <input  value="{{ $category->created_at}}" type="text" class="w-full p-0.5 outline-none bg-transparent border-2 rounded-md px-2 border-cm-gray-5 text-sm text-white" disabled>
                             </div>
                         </div>
                         
@@ -50,19 +50,19 @@
                             <!-- Input: Estado -->
                             <div class="bg-cm-gray-3 text-white rounded-md w-full px-4 pb-3 pt-2">
                                 <label class="text-base font-bold text-cm-gray-5">Estado:</label>
-                                <input type="text" class="w-full p-0.5 outline-none bg-transparent border-2 rounded-md px-2 border-cm-gray-5 text-sm text-white" disabled>
+                                <input value="{{ $category->state ? 'Activo' : 'Inactivo' }}" type="text" class="w-full p-0.5 outline-none bg-transparent border-2 rounded-md px-2 border-cm-gray-5 text-sm text-white" disabled>
                             </div>
 
                             <!-- Input: Categoría padre -->
                             <div class="bg-cm-gray-3 text-white rounded-md w-full px-4 pb-3 pt-2 mt-5">
                                 <label class="text-base font-bold text-cm-gray-5">Categoría padre:</label>
-                                <input type="text" class="w-full p-0.5 outline-none bg-transparent border-2 rounded-md px-2 border-cm-gray-5 text-sm text-white" disabled>
+                                <input value="{{ $category->parent_category ? $category->parent_category->name : 'Sin categoría padre' }}" type="text" class="w-full p-0.5 outline-none bg-transparent border-2 rounded-md px-2 border-cm-gray-5 text-sm text-white" disabled>
                             </div>
 
                             <!-- Input: Ultima actualizacion -->
                             <div class="bg-cm-gray-3 text-white rounded-md w-full px-4 pb-3 pt-2 mt-5">
                                 <label class="text-base font-bold text-cm-gray-5">Ultima actualización:</label>
-                                <input type="text" class="w-full p-0.5 outline-none bg-transparent border-2 rounded-md px-2 border-cm-gray-5 text-sm text-white" disabled>
+                                <input value="{{ $category->updated_at}}" type="text" class="w-full p-0.5 outline-none bg-transparent border-2 rounded-md px-2 border-cm-gray-5 text-sm text-white" disabled>
                             </div>
                         </div>
                     </div>

@@ -37,21 +37,23 @@ Route::middleware("auth")->group(function(){
     //Categories
     Route::get('/categories', [CategoryController::class, 'index'])-> name('category_index');
     Route::get('/categories/create', [CategoryController::class, 'create'])-> name('category_create');
-    Route::get('/categories/edit/{id}', [CategoryController::class, 'edit'])-> name('category_edit');
-    Route::get('/categories/show/{id}', [CategoryController::class, 'show'])->name('category_show');
-    Route::delete('/categories/destroy/{id}', [CategoryController::class, 'destroy'])-> name('category_destroy');
+    Route::post('/categories/store', [CategoryController::class, 'store'])-> name('category_store');
+    Route::get('/categories/show/{category}', [CategoryController::class, 'show'])->name('category_show');
+    Route::get('/categories/edit/{category}', [CategoryController::class, 'edit'])-> name('category_edit');
+    Route::patch('/categories/update/{category}', [CategoryController::class, 'update'])-> name('category_update');
+    Route::delete('/categories/destroy/{category}', [CategoryController::class, 'destroy'])-> name('category_destroy');
     
     //Suppliers
     Route::get('/suppliers', [SupplierController::class, 'index'])-> name('supplier_index');
-    Route::get('/supplier/show/{id}', [SupplierController::class, 'show'])->name('supplier_show');
-    Route::get('/suppliers/edit/{id}', [SupplierController::class, 'edit'])-> name('supplier_edit');
-    Route::delete('/suppliers/destroy/{id}', [SupplierController::class, 'destroy'])-> name('supplier_destroy');
+    Route::get('/supplier/show/{supplier}', [SupplierController::class, 'show'])->name('supplier_show');
+    Route::get('/suppliers/edit/{supplier}', [SupplierController::class, 'edit'])-> name('supplier_edit');
+    Route::delete('/suppliers/destroy/{supplier}', [SupplierController::class, 'destroy'])-> name('supplier_destroy');
 
-    //Suppliers
+    //Tags
     Route::get('/tags', [TagController::class, 'index'])-> name('tag_index');
-    Route::get('/tags/show/{id}', [TagController::class, 'show'])->name('tag_show');
-    Route::get('/tags/edit/{id}', [TagController::class, 'edit'])-> name('tag_edit');
-    Route::delete('/tags/destroy/{id}', [TagController::class, 'destroy'])-> name('tag_destroy');
+    Route::get('/tags/show/{Tag}', [TagController::class, 'show'])->name('tag_show');
+    Route::get('/tags/edit/{Tag}', [TagController::class, 'edit'])-> name('tag_edit');
+    Route::delete('/tags/destroy/{Tag}', [TagController::class, 'destroy'])-> name('tag_destroy');
 
     //Products
     Route::get('/products', [ProductController::class, 'index'])-> name('product_index');
