@@ -45,8 +45,11 @@ Route::middleware("auth")->group(function(){
     
     //Suppliers
     Route::get('/suppliers', [SupplierController::class, 'index'])-> name('supplier_index');
+    Route::get('/suppliers/create', [SupplierController::class, 'create'])-> name('supplier_create');
+    Route::post('/suppliers/store', [SupplierController::class, 'store'])-> name('supplier_store');
     Route::get('/supplier/show/{supplier}', [SupplierController::class, 'show'])->name('supplier_show');
     Route::get('/suppliers/edit/{supplier}', [SupplierController::class, 'edit'])-> name('supplier_edit');
+    Route::patch('/suppliers/update/{supplier}', [SupplierController::class, 'update'])-> name('supplier_update');
     Route::delete('/suppliers/destroy/{supplier}', [SupplierController::class, 'destroy'])-> name('supplier_destroy');
 
     //Tags

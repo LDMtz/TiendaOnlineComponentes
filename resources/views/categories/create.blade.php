@@ -26,7 +26,7 @@
                     <!-- Input: Nombre -->
                     <div class="bg-cm-gray-3 text-white rounded-md w-80 px-4 pb-3 pt-2 mt-8">
                         <label for="name" class="text-base font-bold text-cm-gray-5">Nombre:</label>
-                        <input name="name" value="{{ old('name') }}" type="text" class="w-full p-0.5 outline-none bg-transparent border-2 rounded-md px-2 border-cm-gray-5 text-sm text-white">
+                        <input name="name" value="{{ old('name') }}" type="text" placeholder="Ingresa el nombre" class="w-full p-0.5 outline-none bg-transparent border-2 rounded-md px-2 border-cm-gray-5 text-sm text-white">
                     </div>
                     @error('name')
                         <span class="text-red-500 text-sm mt-1">{{ $message }}</span>
