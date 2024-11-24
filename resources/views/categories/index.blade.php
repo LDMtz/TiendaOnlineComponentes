@@ -16,7 +16,10 @@
 
             <!-- Banner tabla -->
             <div class="flex items-center bg-cm-gray-2 rounded-lg border-2 border-cm-gray-3 mt-7 p-3">
-                <p class="text-white font-bold text-lg">Lista de Categorias</p>
+                <p class="text-white font-bold text-lg">
+                    <i class="fa-solid fa-tags mx-2"></i>
+                    Lista de Categorias
+                </p>
                 <!-- Buttons -->
                 <div class="flex space-x-4 ml-auto">
                     <a id="open-modal" href="#" class="bg-cm-blue-9 text-white py-1 px-3 rounded-lg hover:bg-sky-500 hover:text-sky-100">
