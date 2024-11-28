@@ -19,4 +19,13 @@ class Supplier extends Model
         'number',
         'state'
     ];
+
+    /**
+     * Relationship with Product.
+     * A Supplier can have many Products.
+     */
+    public function products()
+    {
+        return $this->hasMany(Product::class);
+    }
 }

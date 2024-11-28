@@ -39,8 +39,11 @@
         @break
 
         @case('picture')
-            <!-- Imagen -->
-            <img src="{{ asset('images/' .$content) }}" class="inline-flex w-6 h-6 rounded-sm" alt="">
+            @if ($content)
+                <img src="data:image/jpeg;base64,{{ $content }}" class="inline-flex w-12 h-12 rounded-sm" alt="Imagen del producto">
+            @else
+                <img src="{{ asset('images/default-prod-img.png') }}" class="inline-flex w-12 h-12 rounded-sm" alt="Imagen por defecto">
+            @endif
         @break
 
         @default
