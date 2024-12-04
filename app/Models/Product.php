@@ -45,4 +45,10 @@ class Product extends Model
     {
         return $this->hasMany(ProductPicture::class);
     }
+
+    //Relacion de muchos a muchos con las etiquetas
+    public function tags()
+    {
+        return $this->belongsToMany(Tag::class, 'tag_product');
+    }
 }

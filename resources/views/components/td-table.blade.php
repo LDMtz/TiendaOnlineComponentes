@@ -38,6 +38,25 @@
             </div>
         @break
 
+        @case('actions-id')
+            <!-- Celda con botones -->
+            <div class="space-x-1">
+                <a href="{{ route($content['section'] . '_show', ['id' => $content['id']]) }}" class="inline-flex items-center p-1.5 rounded-md bg-cm-purple-7">
+                    <i class="fa-solid fa-eye text-cm-purple-8"></i>
+                </a>
+                <a href="{{ route($content['section'] . '_edit', ['id' => $content['id']]) }}" class="inline-flex items-center p-1.5 rounded-md bg-cm-blue-5">
+                    <i class="fa-solid fa-pen-to-square text-cm-blue-6"></i>
+                </a>
+                <form action="{{ route($content['section'] . '_destroy', ['id' => $content['id']]) }}" method="POST" class="inline-flex items-center ">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit" onclick="return confirm('¿Estás seguro de eliminarlo?')" class="inline-flex items-center p-1.5 rounded-md bg-cm-red-1">
+                        <i class="fa-solid fa-trash-can text-cm-red-3"></i>
+                    </button>
+                </form>
+            </div>
+        @break
+
         @case('picture')
             @if ($content)
                 <img src="data:image/jpeg;base64,{{ $content }}" class="inline-flex w-12 h-12 rounded-sm" alt="Imagen del producto">

@@ -1,10 +1,10 @@
 // Obtener los elementos
 const openModalBtn = document.getElementById('open-modal');
 const closeModalSearchBtn = document.getElementById('close-modal-search');
-const closeModalSuccessBtn = document.getElementById('close-modal-success');
 const modalSearch = document.getElementById('search-modal');
-const modalSuccess = document.getElementById('successModal');
 
+const modalSuccess = document.getElementById('successModal');
+const closeModalSuccessBtn = document.getElementById('close-modal-success');
 
 // Abrir el modal
 openModalBtn.addEventListener('click', (e) => {

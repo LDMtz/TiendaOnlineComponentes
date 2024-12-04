@@ -55,9 +55,12 @@ Route::middleware("auth")->group(function(){
 
     //Tags
     Route::get('/tags', [TagController::class, 'index'])-> name('tag_index');
-    Route::get('/tags/show/{Tag}', [TagController::class, 'show'])->name('tag_show');
-    Route::get('/tags/edit/{Tag}', [TagController::class, 'edit'])-> name('tag_edit');
-    Route::delete('/tags/destroy/{Tag}', [TagController::class, 'destroy'])-> name('tag_destroy');
+    Route::get('/tags/create', [TagController::class, 'create'])-> name('tag_create');
+    Route::post('/tags/store', [TagController::class, 'store'])-> name('tag_store');
+    Route::get('/tags/show/{id}', [TagController::class, 'show'])->name('tag_show');
+    Route::get('/tags/edit/{id}', [TagController::class, 'edit'])-> name('tag_edit');
+    Route::patch('/tags/update/{id}', [TagController::class, 'update'])-> name('tag_update');
+    Route::delete('/tags/destroy/{id}', [TagController::class, 'destroy'])-> name('tag_destroy');
 
     //Products
     Route::get('/products', [ProductController::class, 'index'])-> name('product_index');
