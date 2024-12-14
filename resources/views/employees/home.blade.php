@@ -4,7 +4,7 @@
         <div class="">
             <x-sidebar-employee/>
         </div>
-        <div class="flex-1 p-4 ml-8 my-8">
+        <div class="flex-1 p-4 ml-8 my-5">
 
   <!-- Script para Chart.js -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -15,22 +15,22 @@
         <!-- Fila superior -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <!-- Tarjeta de Bienvenida -->
-            <div class="bg-white shadow rounded-lg p-4">
+            <div class="bg-cm-gray-2 shadow rounded-lg p-4">
                 <div class="flex justify-between items-center">
                     <div>
-                        <p class="text-gray-600 font-bold">Welcome Jonathan</p>
-                        <p class="text-gray-500 text-sm mt-1">Number of Reports</p>
+                        <p class="text-white font-bold">Bienvenido Leoncio</p>
+                        <p class="text-gray-500 text-sm mt-1">Pedidos hechos</p>
                     </div>
                     <p class="text-4xl font-bold text-blue-600">102</p>
                 </div>
             </div>
 
             <!-- Tarjeta de Activos -->
-            <div class="bg-white shadow rounded-lg p-4">
+            <div class="bg-cm-gray-2 shadow rounded-lg p-4">
                 <div class="flex justify-between items-center">
                     <div>
-                        <p class="text-gray-600 font-bold">Active</p>
-                        <p class="text-gray-500 text-sm mt-1">Leads/Contacts</p>
+                        <p class="text-white font-bold">Pedidos en proceso</p>
+                        <p class="text-gray-500 text-sm mt-1">Pedidos pendientes</p>
                     </div>
                     <p class="text-4xl font-bold text-blue-600">325</p>
                 </div>
@@ -40,90 +40,87 @@
         <!-- Fila inferior -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             <!-- Tarjeta Total Leads -->
-            <div class="bg-white shadow rounded-lg p-4">
+            <div class="bg-cm-gray-2 shadow rounded-lg p-4">
                 <div class="flex justify-between items-center">
                     <div>
-                        <p class="text-blue-600 text-xl font-bold">66.13K</p>
-                        <p class="text-gray-500 text-sm">Total Leads</p>
+                        <p class="text-cm-blue-5 text-xl font-bold">300</p>
+                        <p class="text-gray-500 text-sm">Compras</p>
                     </div>
-                    <span class="text-blue-600 text-3xl">📎</span>
+                    <i class="fa-solid fa-cart-shopping text-3xl text-cm-blue-5"></i>
                 </div>
                 <div class="flex justify-between items-center mt-4">
-                    <p class="text-blue-600 text-sm">% change</p>
-                    <div class="bg-blue-600 w-10 h-4"></div>
+
+                    <div class="bg-cm-blue-5 w-10 h-4"></div>
                 </div>
             </div>
 
             <!-- Tarjeta Total Pending -->
-            <div class="bg-white shadow rounded-lg p-4">
+            <div class="bg-cm-gray-2 shadow rounded-lg p-4">
                 <div class="flex justify-between items-center">
                     <div>
-                        <p class="text-red-500 text-xl font-bold">3.490K</p>
-                        <p class="text-gray-500 text-sm">Total Pending</p>
+                        <p class="text-cm-blue-5  text-xl font-bold">195</p>
+                        <p class="text-gray-500 text-sm">Descuentos</p>
                     </div>
-                    <span class="text-red-500 text-3xl">⭕</span>
+                    <i class="fa-solid fa-tag text-3xl text-cm-blue-5"></i>
                 </div>
                 <div class="flex justify-between items-center mt-4">
-                    <p class="text-red-500 text-sm">% change</p>
-                    <div class="bg-red-500 w-10 h-4"></div>
+                    <div class="bg-cm-blue-5 w-10 h-4"></div>
                 </div>
             </div>
 
             <!-- Tarjeta Case Closed -->
-            <div class="bg-white shadow rounded-lg p-4">
+            <div class="bg-cm-gray-2 shadow rounded-lg p-4">
                 <div class="flex justify-between items-center">
                     <div>
-                        <p class="text-green-500 text-xl font-bold">8.372K</p>
-                        <p class="text-gray-500 text-sm">Case Closed</p>
+                        <p class="text-cm-blue-5 text-xl font-bold">273</p>
+                        <p class="text-gray-500 text-sm">Elementos por llegar</p>
                     </div>
-                    <span class="text-green-500 text-3xl">🔒</span>
+                    <i class="fa-solid fa-meteor text-cm-blue-5 text-3xl"></i>
                 </div>
                 <div class="flex justify-between items-center mt-4">
-                    <p class="text-green-500 text-sm">% change</p>
-                    <div class="bg-green-500 w-10 h-4"></div>
+                    <div class="bg-cm-blue-5 w-10 h-4"></div>
                 </div>
             </div>
 
             <!-- Tarjeta Task Completed -->
-            <div class="bg-white shadow rounded-lg p-4">
+            <div class="bg-cm-gray-2 shadow rounded-lg p-4">
                 <div class="flex justify-between items-center">
                     <div>
-                        <p class="text-orange-500 text-xl font-bold">5.355K</p>
-                        <p class="text-gray-500 text-sm">Task Completed</p>
+                        <p class="text-cm-blue-5 text-xl font-bold">355</p>
+                        <p class="text-gray-500 text-sm">Elementos recibidos</p>
                     </div>
-                    <span class="text-orange-500 text-3xl">📄</span>
+                    <i class="fa-solid fa-truck-ramp-box text-cm-blue-5 text-3xl"></i>
                 </div>
                 <div class="flex justify-between items-center mt-4">
-                    <p class="text-orange-500 text-sm">% change</p>
-                    <div class="bg-orange-500 w-10 h-4"></div>
+                    <div class="bg-cm-blue-5 w-10 h-4"></div>
                 </div>
             </div>
         </div>
         
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
     <!-- Tabla Active Orders -->
-    <div class="bg-white shadow rounded-lg p-4 overflow-auto">
-        <h2 class="text-lg font-bold text-gray-600 mb-4">Active Orders</h2>
+    <div class="bg-cm-gray-2 shadow rounded-lg p-4 overflow-auto">
+        <h2 class="text-lg font-bold text-white mb-4">Productos en almacén</h2>
         <table class="min-w-full text-left border-collapse">
             <thead>
-                <tr class="bg-gray-100">
-                    <th class="px-4 py-2 text-gray-600 font-medium">Order</th>
-                    <th class="px-4 py-2 text-gray-600 font-medium">Item Name</th>
-                    <th class="px-4 py-2 text-gray-600 font-medium">Quantity</th>
-                    <th class="px-4 py-2 text-gray-600 font-medium">Product Code</th>
-                    <th class="px-4 py-2 text-gray-600 font-medium">Vendor</th>
-                    <th class="px-4 py-2 text-gray-600 font-medium">Order Date</th>
+            <tr class="bg-cm-gray-2">
+                    <th class="px-4 py-2 text-white font-medium whitespace-nowrap">Orden</th>
+                    <th class="px-4 py-2 text-white font-medium whitespace-nowrap">Nombre</th>
+                    <th class="px-4 py-2 text-white font-medium whitespace-nowrap">Cantidad</th>
+                    <th class="px-4 py-2 text-white font-medium whitespace-nowrap">Código del producto</th>
+                    <th class="px-4 py-2 text-white font-medium whitespace-nowrap">Proovedor</th>
+                    <th class="px-4 py-2 text-white font-medium whitespace-nowrap">Fecha de llegada</th>
                 </tr>
             </thead>
             <tbody>
                 <!-- Fila de ejemplo -->
                 <tr class="border-b">
-                    <td class="px-4 py-2 text-gray-700">3589</td>
-                    <td class="px-4 py-2 text-gray-700">Arch</td>
-                    <td class="px-4 py-2 text-gray-700">1</td>
-                    <td class="px-4 py-2 text-gray-700">19145</td>
-                    <td class="px-4 py-2 text-gray-700">Hocks</td>
-                    <td class="px-4 py-2 text-gray-700">6/27/2019</td>
+                    <td class="px-4 py-2 text-gray-500">3589</td>
+                    <td class="px-4 py-2 text-gray-500">Arch</td>
+                    <td class="px-4 py-2 text-gray-500">1</td>
+                    <td class="px-4 py-2 text-gray-500">19145</td>
+                    <td class="px-4 py-2 text-gray-500">Hocks</td>
+                    <td class="px-4 py-2 text-gray-500">6/27/2019</td>
                 </tr>
                 <!-- Agrega más filas aquí -->
             </tbody>
@@ -131,8 +128,8 @@
     </div>
 
     <!-- Gráfico Analytics -->
-    <div class="bg-white shadow rounded-lg p-4">
-        <h2 class="text-lg font-bold text-gray-600 mb-4">Analytics</h2>
+    <div class="bg-cm-gray-2 shadow rounded-lg p-4">
+        <h2 class="text-lg font-bold text-white mb-4">Análisis</h2>
         <canvas id="analyticsChart" class="w-full h-64"></canvas>
     </div>
 </div>
@@ -144,11 +141,11 @@
     const analyticsChart = new Chart(ctx, {
         type: 'bar',
         data: {
-            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug'],
+            labels: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago'],
             datasets: [{
-                label: 'Customers',
+                label: 'Clientes',
                 data: [300, 400, 500, 600, 700, 800, 700, 600],
-                backgroundColor: 'rgba(54, 162, 235, 0.5)',
+                backgroundColor: 'rgba(26, 55, 246, 1)',
                 borderColor: 'rgba(54, 162, 235, 1)',
                 borderWidth: 1
             }]
