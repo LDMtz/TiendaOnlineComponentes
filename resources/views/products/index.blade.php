@@ -11,14 +11,14 @@
                 <a href="{{route('home')}}" class="w-7 h-7 flex items-center justify-center rounded-full bg-cm-blue-10 p-1 hover:bg-blue-400">
                     <i class="fa-solid fa-arrow-left text-white text-lg"></i>
                 </a>
-                <h1 class="text-cm-blue-10 font-black text-3xl" >SECCIÓN CATEGORIAS</h1>
+                <h1 class="text-cm-blue-10 font-black text-3xl" >SECCIÓN PRODUCTOS</h1>
             </div>
 
             <!-- Banner tabla -->
             <div class="flex items-center bg-cm-gray-2 rounded-lg border-2 border-cm-gray-3 mt-7 p-3">
                 <p class="text-white font-bold text-lg">
-                    <i class="fa-solid fa-tags mx-2"></i>
-                    Lista de Categorias
+                    <i class="fa-solid fa-box mx-2"></i>
+                    Lista de Productos
                 </p>
                 <!-- Buttons -->
                 <div class="flex space-x-4 ml-auto">
@@ -26,7 +26,7 @@
                         <i class="fa-solid fa-magnifying-glass"></i>
                         <span class="font-semibold ml-1">BUSCAR</span>
                     </a>
-                    <a href="{{route('category_create')}}" class="bg-cm-green-3 text-white py-1 px-3 rounded-lg hover:bg-green-500 hover:text-green-100">
+                    <a href="{{route('product_create')}}" class="bg-cm-green-3 text-white py-1 px-3 rounded-lg hover:bg-green-500 hover:text-green-100">
                         <i class="fa-solid fa-plus"></i>
                         <span class="font-semibold ml-1">AGREGAR</span>
                     </a>
@@ -37,35 +37,36 @@
             <div class="bg-cm-gray-2 rounded-lg border-2 border-cm-gray-3 mt-6 p-4">
                 <x-table>
                     <x-slot name="headTable">
+                        <x-th-table>Foto</x-th-table>
                         <x-th-table>Id</x-th-table>
                         <x-th-table>Nombre</x-th-table>
-                        <x-th-table>Categoría padre</x-th-table>
+                        <x-th-table>Modelo</x-th-table>
+                        <x-th-table>Marca</x-th-table>
+                        <x-th-table>Categoría</x-th-table>
+                        <x-th-table>Proveedor</x-th-table>
                         <x-th-table>Estado</x-th-table>
-                        <x-th-table>Fecha de Creación</x-th-table>
-                        <x-th-table>Ultima Actualización</x-th-table>
                         <x-th-table>Acciones</x-th-table>
                     </x-slot>
                     <x-slot name="bodyTable">
-                        @foreach($categories as $category)
+                        @foreach($products as $product)
                         <tr>
-                            <x-td-table type="normal" :content="$category['id']" />
-                            <x-td-table type="normal" :content="$category['name']" />
-                            <x-td-table type="normal" :content="$category->parentCategory ? $category->parentCategory->name : 'Sin categoría padre'" />
-                            <x-td-table type="state" :content="$category['state']" />
-                            <x-td-table type="normal" :content="$category['created_at']" />
-                            <x-td-table type="normal" :content="$category['updated_at']" />
-                            <x-td-table type="actions" :content="['section' => 'category', 'id' => $category['id']]" />
+                            <x-td-table type="picture" :content="$product->first_picture_base64" />
+                            <x-td-table type="normal" :content="$product['id']" />
+                            <x-td-table type="normal" :content="$product->data['data']['general-data']['name']" />
+                            <x-td-table type="normal" :content="$product->data['data']['general-data']['model']" />
+                            <x-td-table type="normal" :content="$product->data['data']['general-data']['brand']" />
+                            <x-td-table type="normal" :content="$product->category->name" />
+                            <x-td-table type="normal" :content="$product->supplier->name" />
+                            <x-td-table type="state" :content="$product['state']" />
+                            <x-td-table type="actions" :content="['section' => 'product', 'id' => $product['id']]" />
                         </tr>
                         @endforeach
                     </x-slot>
                 </x-table>
             </div>
 
-
-
         </div>
     </div>
-
 @push('scripts')
     @vite('resources/js/modal-crud.js')
 @endpush
@@ -137,27 +138,3 @@
         </div>
     </div>
 @endif
-
-
-<!-- Modal delete -->
-<div id="popup-modal" class="hidden">
-    <div tabindex="-1" class="fixed inset-0 flex justify-center items-center z-50 bg-black bg-opacity-50 ">
-        <div class="relative p-4 w-full max-w-md max-h-full">
-            <div class="relative rounded-lg shadow bg-gray-700">
-                <button id="close-confirmation-modal" onclick="closeModalDelete()" type="button" class="absolute top-2.5 right-2.5 text-gray-400 bg-transparent rounded-lg text-sm p-1.5 ml-auto inline-flex items-center hover:bg-gray-600 hover:text-white">
-                    <i class="fa-solid fa-x"></i>
-                </button>
-                <div class="p-4 text-center">
-                    <i class="fa-solid fa-circle-exclamation mx-auto mb-4 text-gray-200 text-4xl"></i>
-                    <h3 class="mb-5 text-lg font-normal text-gray-400">¿Estás seguro de que lo quieres eliminar?</h3>
-                    <button id="confirm-action-delete" type="button" class="text-white bg-red-600 hover:bg-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center">
-                        Si, estoy seguro
-                    </button>
-                    <button id="cancel-confirmation-delete" type="button" class="py-2.5 px-5 ms-3 text-sm font-medium rounded-lg border bg-gray-800 text-gray-400 border-gray-600 hover:text-white hover:bg-gray-400">
-                        No, cancelar
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>

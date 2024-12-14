@@ -4,36 +4,36 @@
             <h1 class="text-center text-2xl font-bold text-cm-blue-6 mb-6">Crear una cuenta</h1>
 
             <!-- Formulario -->
-            <form action="{{route('store')}}" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 @method('POST')
                 <div class="grid grid-cols-2 gap-4"> <!-- Dividir en 2 columnas -->
-
+            
                     <div>
                         <!-- names -->
                         <div class="mb-4">
                             <label for="names" class="text-cm-blue-3 text-md font-bold">Nombres:</label>
                             <div class="relative">
                                 <i class="fa-solid fa-user-group absolute left-2 top-1/2 transform -translate-y-1/2 text-cm-blue-3"></i>
-                                <input name="names" type="text" required autocomplete="off" class="py-1 text-sm border-2 rounded-lg pl-7 border-cm-purple-3 bg-cm-purple-4 text-cm-blue-3 focus:outline-none focus:border-cm-blue-1 focus:text-white w-full">
+                                <input name="names" type="text" required autocomplete="off" class="py-1 text-sm border-2 rounded-lg pl-7 border-cm-purple-3 bg-cm-purple-4 text-cm-blue-3 focus:outline-none focus:border-cm-blue-1 focus:text-white w-full" value="{{ old('names') }}">
                             </div>
                             @error('names')
-                                <div class="text-red-500 text-sm">{{ $message }}</div>
+                                <span class="text-red-500 text-sm">{{ $message }}</span>
                             @enderror
                         </div>
-
+            
                         <!-- username -->
                         <div class="mb-4">
                             <label for="username" class="text-cm-blue-3 text-md font-bold">Nombre de usuario:</label>
                             <div class="relative">
                                 <i class="fa-solid fa-circle-user absolute left-2 top-1/2 transform -translate-y-1/2 text-cm-blue-3"></i>
-                                <input name="username" type="text" required autocomplete="off" class="py-1 text-sm border-2 rounded-lg pl-7 border-cm-purple-3 bg-cm-purple-4 text-cm-blue-3 focus:outline-none focus:border-cm-blue-1 focus:text-white w-full">
+                                <input name="username" type="text" required autocomplete="off" class="py-1 text-sm border-2 rounded-lg pl-7 border-cm-purple-3 bg-cm-purple-4 text-cm-blue-3 focus:outline-none focus:border-cm-blue-1 focus:text-white w-full" value="{{ old('username') }}">
                             </div>
                             @error('username')
-                                <div class="text-red-500 text-sm">{{ $message }}</div>
+                                <span class="text-red-500 text-sm">{{ $message }}</span>
                             @enderror
                         </div>
-
+            
                         <!-- password -->
                         <div class="mb-4">
                             <label for="password" class="text-cm-blue-3 text-md font-bold">Contraseña:</label>
@@ -42,58 +42,58 @@
                                 <input name="password" type="password" required autocomplete="off" class="py-1 text-sm border-2 rounded-lg pl-7 border-cm-purple-3 bg-cm-purple-4 text-cm-blue-3 focus:outline-none focus:border-cm-blue-1 focus:text-white w-full">
                             </div>
                             @error('password')
-                                <div class="text-red-500 text-sm">{{ $message }}</div>
+                                <span class="text-red-500 text-sm">{{ $message }}</span>
                             @enderror
                         </div>
-
+            
                         <!-- email -->
                         <div class="mb-4">
                             <label for="email" class="text-cm-blue-3 text-md font-bold">Correo electrónico:</label>
                             <div class="relative">
                                 <i class="fa-solid fa-envelope absolute left-2 top-1/2 transform -translate-y-1/2 text-cm-blue-3"></i>
-                                <input name="email" type="email" required autocomplete="off" class="py-1 text-sm border-2 rounded-lg pl-7 border-cm-purple-3 bg-cm-purple-4 text-cm-blue-3 focus:outline-none focus:border-cm-blue-1 focus:text-white w-full">
+                                <input name="email" type="email" required autocomplete="off" class="py-1 text-sm border-2 rounded-lg pl-7 border-cm-purple-3 bg-cm-purple-4 text-cm-blue-3 focus:outline-none focus:border-cm-blue-1 focus:text-white w-full" value="{{ old('email') }}">
                             </div>
                             @error('email')
-                                <div class="text-red-500 text-sm">{{ $message }}</div>
+                                <span class="text-red-500 text-sm">{{ $message }}</span>
                             @enderror
                         </div>
-
+            
                     </div>
-    
+            
                     <div>
                         <div class="mb-4">
                             <label for="last_names" class="text-cm-blue-3 text-md font-bold">Apellidos:</label>
                             <div class="relative">
                                 <i class="fa-solid fa-address-card absolute left-2 top-1/2 transform -translate-y-1/2 text-cm-blue-3"></i>
-                                <input name="last_names" type="text" required autocomplete="off" class="py-1 text-sm border-2 rounded-lg pl-7 border-cm-purple-3 bg-cm-purple-4 text-cm-blue-3 focus:outline-none focus:border-cm-blue-1 focus:text-white w-full">
+                                <input name="last_names" type="text" required autocomplete="off" class="py-1 text-sm border-2 rounded-lg pl-7 border-cm-purple-3 bg-cm-purple-4 text-cm-blue-3 focus:outline-none focus:border-cm-blue-1 focus:text-white w-full" value="{{ old('last_names') }}">
                             </div>
                             @error('last_names')
-                                <div class="text-red-500 text-sm">{{ $message }}</div>
+                                <span class="text-red-500 text-sm">{{ $message }}</span>
                             @enderror
                         </div>
-
+            
                         <div class="mb-4">
                             <label for="number" class="text-cm-blue-3 text-md font-bold">Teléfono:</label>
                             <div class="relative">
                                 <i class="fa-solid fa-phone absolute left-2 top-1/2 transform -translate-y-1/2 text-cm-blue-3"></i>
-                                <input name="number" type="text" required autocomplete="off" class="py-1 text-sm border-2 rounded-lg pl-7 border-cm-purple-3 bg-cm-purple-4 text-cm-blue-3 focus:outline-none focus:border-cm-blue-1 focus:text-white w-full">
+                                <input name="number" type="text" required autocomplete="off" class="py-1 text-sm border-2 rounded-lg pl-7 border-cm-purple-3 bg-cm-purple-4 text-cm-blue-3 focus:outline-none focus:border-cm-blue-1 focus:text-white w-full" value="{{ old('number') }}">
                             </div>
                             @error('number')
-                                <div class="text-red-500 text-sm">{{ $message }}</div>
+                                <span class="text-red-500 text-sm">{{ $message }}</span>
                             @enderror
                         </div>
-
+            
                         <div class="mb-4">
-                            <label for="password_confirmation" class="text-cm-blue-3 text-md font-bold">Cofirmar Contraseña:</label>
+                            <label for="password_confirmation" class="text-cm-blue-3 text-md font-bold">Confirmar Contraseña:</label>
                             <div class="relative">
                                 <i class="fa-solid fa-key absolute left-2 top-1/2 transform -translate-y-1/2 text-cm-blue-3"></i>
                                 <input name="password_confirmation" type="password" required autocomplete="off" class="py-1 text-sm border-2 rounded-lg pl-7 border-cm-purple-3 bg-cm-purple-4 text-cm-blue-3 focus:outline-none focus:border-cm-blue-1 focus:text-white w-full">
                             </div>
                             @error('password_confirmation')
-                                <div class="text-red-500 text-sm mt-0">{{ $message }}</div>
+                                <span class="text-red-500 text-sm mt-0">{{ $message }}</span>
                             @enderror
                         </div>
-                        
+            
                         <div>
                             <label for="picture_profile" class="text-cm-blue-3 text-md font-bold">Foto de perfil (opcional):</label>
                             <label class="block">
@@ -106,20 +106,21 @@
                                 "/>
                             </label>
                             @error('picture_profile')
-                                <div class="text-red-500 text-sm">{{ $message }}</div>
+                                <span class="text-red-500 text-sm">{{ $message }}</span>
                             @enderror
                         </div>
-    
+            
                     </div>
-                    
+            
                 </div>
-                
+            
                 <div class="flex justify-center mb-8">
                     <button type="submit" class="mt-8 w-36 bg-blue-500 text-white rounded-lg py-2 hover:bg-blue-600 font-medium">
                         Registrarse
                     </button>
                 </div>
             </form>
+            
 
             <div class="flex justify-center text-white font-semibold">
                 <label>¿Ya tienes una cuenta? 
