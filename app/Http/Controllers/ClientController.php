@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Client;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ClientController extends Controller
 {
@@ -34,9 +35,21 @@ class ClientController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit() //FALTA PASARLE EL ID
+    public function edit()
     {
-        return view('clients.edit');
+        $user = Auth::user();
+        $client = $user->client;
+        $account = $client->account;
+
+        $accountData = [
+            'id' => $account->id,
+            'username' => $account->username,
+            'email' => $account->email,
+            'picture_profile' => $account->picture_profile ? base64_encode($account->picture_profile) : null,
+            'created_at' => $account->created_at,
+        ];
+
+        return view('clients.edit', compact('client', 'accountData'));
     }
 
 
@@ -56,17 +69,7 @@ class ClientController extends Controller
      */
     public function store(Request $request)
     {
-        /*
-        $item = new Client();
-        $item->fill([
-            'name' => $request->name,
-            'last_names' => $request->last_names,
-            'number' => $request->number,
-            'email' => $request->email,
-            'state' => true,  // Asignamos `true` al campo `state`
-        ]);
-        $item->save();
-        return to_route('login');*/
+        //
     }
 
     /**
