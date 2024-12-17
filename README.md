@@ -3,6 +3,9 @@
 ## Tecnologias utilizadas
 > Laravel
 > Tailwind
+> MVC
+> Github
+> Figma
 
 ## Librerias utilizadas
 > Fontawesome

@@ -9,6 +9,7 @@ use App\Http\Controllers\SupplierController;
 use App\Http\Controllers\TagController;
 use App\Http\Controllers\ProductController;
 
+//Para usuarios autenticados
 Route::middleware("guest")->group(function(){
     //Auth
     Route::get('/', [AuthController::class, 'index'])-> name('default_home'); //<-- Solo el home de invitados
@@ -22,6 +23,7 @@ Route::middleware("guest")->group(function(){
     Route::post('/store', [AccountController::class, 'store'])->name('store');
 });
 
+//Para usuarios autenticados
 Route::middleware("auth")->group(function(){
     //Auth
     Route::get('/home', [AuthController::class, 'home'])-> name('home');
