@@ -51,4 +51,9 @@ class Product extends Model
     {
         return $this->belongsToMany(Tag::class, 'tag_product');
     }
+
+    public function inventory()
+    {
+        return $this->hasOne(Inventory::class);
+    }
 }

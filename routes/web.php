@@ -34,6 +34,7 @@ Route::middleware("auth")->group(function(){
     Route::get('/clients/my-purchases', [ClientController::class, 'my_purchases'])-> name('client_purchases');
     Route::get('/clients/my-bills', [ClientController::class, 'my_bills'])-> name('client_bills');
 
+    Route::get('/clients/show-product/{product}', [ClientController::class, 'show_product'])-> name('client_show_product');
 
     //Categories
     Route::get('/categories', [CategoryController::class, 'index'])-> name('category_index');

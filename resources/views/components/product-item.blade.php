@@ -7,15 +7,30 @@
             @endforeach
         </div>
         <div class="flex w-full justify-center bg-white">
-            <!-- TODO: CAMBIAR LA IMAGEN, POR LO MIENTRAS ESTÁ FIJA -->
-            <img class="w-auto h-28 object-contain" src="{{ asset('images/temp/procesador-prueba.png') }}" alt="producto de prueba">
+            @if (!empty($dataProduct['image']))
+                <img 
+                    class="w-auto h-28 object-contain" 
+                    src="data:image/jpeg;base64,{{ $dataProduct['image'] }}" 
+                    alt="foto del producto">
+            @else
+                <img 
+                    class="w-auto h-28 object-contain" 
+                    src="{{ asset('Images/default-prod-img.png') }}"
+                    alt="imagen predeterminada">
+            @endif
         </div>
         <div class="text-cm-gray-10 leading-4">
             <p class="line-clamp-3">{{$dataProduct['name']}}</p>
         </div>
-        <div class="text-center">
-            <span class="font-semibold text-xs text-cm-purple-10">{{$dataProduct['price']}}</span>
-        </div>
+            @if (!empty($dataProduct['price']))
+                <div class="text-center">
+                    <span class="font-semibold text-xs text-cm-purple-10">{{$dataProduct['price']}}</span>
+                </div>
+            @else
+                <div class="text-center">
+                    <span class="font-semibold text-xs text-cm-purple-10">Sin precio</span>
+                </div>
+            @endif
         <div class="text-center text-white">
             <i class="{{$iconState}}"></i>
             <span class="ml-1 font-semibold text-xs">{{$contentState}}</span>
