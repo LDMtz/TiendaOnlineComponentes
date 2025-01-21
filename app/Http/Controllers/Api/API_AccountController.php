@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Auth;
 class API_AccountController extends Controller
 {
 
-    public function store(Request $request){
+    public function store_client(Request $request){
         //Si viene estructurado de forma anidada
         if ($request->has('account') && $request->has('client')) {
             $request->merge([
@@ -143,51 +143,45 @@ class API_AccountController extends Controller
 
         if($account->client){
             $data = [
+                'account' => [
+                    'id' => $account->id,
+                    'role_id' => $account->role_id,
+                    'username' => $account->username,
+                    'email' => $account->email,
+                    'state' => (bool)$account->state,
+                    'picture_profile' => $account->picture_profile ? base64_encode($account->picture_profile) : null,
+                ],
                 'client' => [
                     'id' => $account->client->id,
                     'names' => $account->client->names,
                     'last_names' => $account->client->last_names,
                     'number' => $account->client->number,
-                    'state' => $account->client->state,
+                    'state' => (bool)$account->client->state,
                 ],
-                'account' => [
-                    'id' => $account->id,
-                    'role_id' => $account->role_id,
-                    'username' => $account->username,
-                    'email' => $account->email,
-                    'state' => $account->state,
-                    'picture_profile' => $account->picture_profile ? base64_encode($account->picture_profile) : null,
-                ],
-
             ];
         }
 
         if($account->employee){
             $data = [
-                'employee' => [
-                    'id' => $account->employee->id,
-                    'names' => $account->employee->names,
-                    'last_names' => $account->employee->last_names,
-                    'number' => $account->employee->number,
-                    'state' => $account->employee->state,
-                ],
                 'account' => [
                     'id' => $account->id,
                     'role_id' => $account->role_id,
                     'username' => $account->username,
                     'email' => $account->email,
-                    'state' => $account->state,
+                    'state' => (bool)$account->state,
                     'picture_profile' => $account->picture_profile ? base64_encode($account->picture_profile) : null,
                 ],
-
+                'employee' => [
+                    'id' => $account->employee->id,
+                    'names' => $account->employee->names,
+                    'last_names' => $account->employee->last_names,
+                    'number' => $account->employee->number,
+                    'state' => (bool)$account->employee->state,
+                ],
             ];
         }
 
-        return response()->json([
-            'message' => 'Datos de la cuenta obtenidos con éxito',
-            'status' => true,
-            'data' => $data,
-        ], 200);
+        return response()->json($data, 200);
 
     }
 

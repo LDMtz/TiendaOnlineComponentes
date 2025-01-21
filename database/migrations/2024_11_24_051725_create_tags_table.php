@@ -21,19 +21,19 @@ return new class extends Migration
         // Insertar las etiquetas
         DB::table('tags')->insert([
             [
-                'name' => 'discount',
+                'name' => 'DESCUENTO',
                 'path' => 'etiqueta-desc.png',
             ],
             [
-                'name' => 'exclusive',
+                'name' => 'EXCLUSIVO',
                 'path' => 'etiqueta-exclusive.png',
             ],
             [
-                'name' => 'new',
+                'name' => 'NUEVO',
                 'path' => 'etiqueta-new.png',
             ],
             [
-                'name' => 'free_shipping',
+                'name' => 'ENVIO GRATIS',
                 'path' => 'etiqueta-envio.png',
             ],
         ]);
